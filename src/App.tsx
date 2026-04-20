@@ -460,7 +460,7 @@ const Factories = () => {
     
     { id: "07", name: "Eurowindow", loc: "Hanoi", type: "Aluminum + uPVC Windows/Doors · Curtain Walls · Timber Doors", rating: 4, hub: "NORTH — HANOI HUB · JUN 3 – JUN 6", details: ["Vietnam's pioneer in modern window solutions.", "Massive scale and diverse product lines.", "Strong international quality certifications."] },
     { id: "08", name: "Tonmat Group", loc: "Bac Ninh", type: "Insulated Roof + Wall Panels · Metal Roofing · Color-Coated Steel", rating: 5, hub: "NORTH", details: ["Leader in insulated sandwich panels (PU, PIR, Rockwool).", "Essential for modern, energy-efficient building envelopes.", "High automated production capacity."] },
-    { id: "09", name: "EuroStark (EuP Group)", loc: "Yen Bai Province — ~3.5 hrs from Hanoi ⚠️", type: "WPC Decking · Cladding · Fencing · Outdoor Furniture", rating: 4, hub: "NORTH", stats: [
+    { id: "09", name: "EuroStark (EuP Group)", loc: "Yen Bai", type: "WPC Decking · Cladding · Fencing · Outdoor Furniture", rating: 4, hub: "NORTH", stats: [
       ["EST. REVENUE", "$320M (EuP Group parent)"],
       ["FACTORY", "150,000 m²"],
       ["CAPACITY", "90 containers/month"],
@@ -471,7 +471,7 @@ const Factories = () => {
       "OEM/ODM specialist: WPC decking (standard + premium co-extrusion), wall cladding, DIY fencing, WPC gates, outdoor tables/chairs, shower plates — comprehensive outdoor living catalog.",
       "ISO 9001, ISO 14001, FSC, BSCI Level B, Intertek, TÜV/SGS certified — documentation is export-ready for US buyers.",
       "Already shipping to European DIY retailers at scale — the US is their next target market.",
-      "⚠️ Location note: Yen Bai Province is ~3.5 hours from Hanoi. Best scheduled as a dedicated day trip or overnight, not combined with other Hanoi-area stops."
+      "Location note: Yen Bai Province is ~3.5 hours from Hanoi. Best scheduled as a dedicated day trip or overnight, not combined with other Hanoi-area stops."
     ] },
     { id: "10", name: "Amy Grupo", loc: "Vinh Phuc", type: "Tile · SPC/LVT Flooring · WPC Decking · Wall Panels", rating: 5, hub: "NORTH", details: ["Rapidly growing manufacturer of advanced flooring.", "High-tech production lines producing world-class SPC.", "Strong focus on US export market standards."] },
     { id: "11", name: "An Phat Holdings", loc: "Hai Phong", type: "SPC/LVT Flooring · PVC Wall Panels · Wall Cladding", rating: 4, hub: "NORTH", details: ["Major plastics conglomerate with dedicated high-tech building materials division.", "Huge scale and raw material integration advantage.", "Reliable OEM partner for global brands."] },
