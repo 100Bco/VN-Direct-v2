@@ -42,10 +42,8 @@ const Navigation = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-bg-dark/95 backdrop-blur-md border-b border-border-subtle py-4' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
-          <div className="flex flex-col">
-            <span className="text-sm font-serif text-brand-gold">Vietnam Direct 2026</span>
-            <span className={`text-[10px] uppercase tracking-widest font-medium transition-colors ${isScrolled ? 'text-text-body' : 'text-white/70'}`}>Build Better Series</span>
-          </div>
+          <img src="/logos/100B%20-%20TACH%20NEN%20-1.png" alt="100B" className="h-8 md:h-9 w-auto object-contain" />
+          <img src="/logos/LOGO%20LT%20COMMERCIAL.png" alt="LT Commercial Group" className="h-8 md:h-9 w-auto object-contain" />
         </div>
 
         <div className="hidden lg:flex items-center gap-8">
@@ -158,30 +156,30 @@ const Hero = () => (
           Source materials <strong className="font-medium text-gradient-gold">straight from the factory.</strong><br />
           <span className="text-white/80">Cut 20–25% off your cost sheet. No middlemen.</span>
         </p>
+      </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 md:gap-4 text-left items-stretch">
-          <div className="flex items-center gap-3 lg:gap-4 p-4 bg-bg-card/80 backdrop-blur-md rounded-2xl border border-white/10 hover:border-brand-gold/50 transition-colors h-full text-white/80">
-            <Calendar className="text-brand-gold shrink-0" size={20} />
-            <div className="text-xs xl:text-sm"><strong className="text-white font-semibold">7 Days</strong></div>
-          </div>
-          <div className="flex items-center gap-3 lg:gap-4 p-4 bg-bg-card/80 backdrop-blur-md rounded-2xl border border-white/10 hover:border-brand-gold/50 transition-colors h-full text-white/80">
-            <Building className="text-brand-gold shrink-0" size={20} />
-            <div className="text-xs xl:text-sm"><strong className="text-white font-semibold">12</strong> Factories</div>
-          </div>
-          <div className="flex items-center gap-3 lg:gap-4 p-4 bg-bg-card/80 backdrop-blur-md rounded-2xl border border-white/10 hover:border-brand-gold/50 transition-colors h-full text-white/80">
-            <Users className="text-brand-gold shrink-0" size={20} />
-            <div className="text-xs xl:text-sm"><strong className="text-white font-semibold">Limited Seats</strong></div>
-          </div>
-          <div className="flex items-center gap-3 lg:gap-4 p-4 bg-bg-card/80 backdrop-blur-md rounded-2xl border border-white/10 hover:border-brand-gold/50 transition-colors h-full text-white/80">
-            <Award className="text-brand-gold shrink-0" size={20} />
-            <div className="text-xs xl:text-sm">Hosted by <strong className="text-white font-semibold">100B</strong></div>
-          </div>
-          
-          <a href="#apply" className="flex items-center justify-center gap-2 p-4 w-full h-full btn-silver-gradient rounded-2xl text-[13px] xl:text-sm group sm:col-span-2 lg:col-span-1">
-            <span className="font-bold whitespace-nowrap lg:whitespace-normal xl:whitespace-nowrap">Request Invitation</span>
-            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform shrink-0" />
-          </a>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr_1fr_2.5fr] gap-3 md:gap-4 text-left items-stretch">
+        <div className="flex items-center gap-3 lg:gap-4 p-4 bg-bg-card/80 backdrop-blur-md rounded-2xl border border-white/10 hover:border-brand-gold/50 transition-colors h-full text-white/80">
+          <Calendar className="text-brand-gold shrink-0" size={20} />
+          <div className="text-xs xl:text-sm"><strong className="text-white font-semibold">7 Days</strong></div>
         </div>
+        <div className="flex items-center gap-3 lg:gap-4 p-4 bg-bg-card/80 backdrop-blur-md rounded-2xl border border-white/10 hover:border-brand-gold/50 transition-colors h-full text-white/80">
+          <Building className="text-brand-gold shrink-0" size={20} />
+          <div className="text-xs xl:text-sm"><strong className="text-white font-semibold">12</strong> Factories</div>
+        </div>
+        <div className="flex items-center gap-3 lg:gap-4 p-4 bg-bg-card/80 backdrop-blur-md rounded-2xl border border-white/10 hover:border-brand-gold/50 transition-colors h-full text-white/80">
+          <Users className="text-brand-gold shrink-0" size={20} />
+          <div className="text-xs xl:text-sm"><strong className="text-white font-semibold">Limited Seats</strong></div>
+        </div>
+        <div className="flex items-center gap-3 lg:gap-4 p-4 bg-bg-card/80 backdrop-blur-md rounded-2xl border border-white/10 hover:border-brand-gold/50 transition-colors h-full text-white/80">
+          <Award className="text-brand-gold shrink-0" size={20} />
+          <div className="text-xs xl:text-sm whitespace-nowrap">Hosted by <strong className="text-white font-semibold">100B</strong></div>
+        </div>
+
+        <a href="#apply" className="flex items-center justify-center gap-2 p-4 w-full h-full btn-silver-gradient rounded-2xl text-[13px] xl:text-sm group sm:col-span-2 lg:col-span-1">
+          <span className="font-bold whitespace-nowrap">Request Invitation</span>
+          <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform shrink-0" />
+        </a>
       </div>
     </div>
   </header>
