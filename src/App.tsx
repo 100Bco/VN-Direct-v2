@@ -193,7 +193,7 @@ const Hero = () => (
 );
 
 const Problem = () => (
-  <section id="problem" className="py-16 md:py-24 border-t border-border-subtle bg-bg-alt flex flex-col justify-center min-h-[90vh]">
+  <section id="problem" className="py-20 lg:py-28 border-t border-border-subtle bg-bg-alt flex flex-col justify-center min-h-[90vh]">
     <div className="max-w-7xl mx-auto px-6 w-full">
       <SectionHeader 
         subtitle="The Reality Right Now" 
@@ -224,7 +224,7 @@ const Problem = () => (
 );
 
 const Opportunity = () => (
-  <section id="opportunity" className="py-16 lg:py-24 border-t border-border-subtle bg-bg-dark">
+  <section id="opportunity" className="py-20 lg:py-28 border-t border-border-subtle bg-bg-dark">
     <div className="max-w-7xl mx-auto px-6">
       <SectionHeader 
         subtitle="The Opportunity" 
@@ -284,7 +284,7 @@ const Opportunity = () => (
 );
 
 const Vietnam = () => (
-  <section id="vietnam" className="py-16 lg:py-24 border-t border-border-subtle bg-bg-alt">
+  <section id="vietnam" className="py-20 lg:py-28 border-t border-border-subtle bg-bg-alt">
     <div className="max-w-7xl mx-auto px-6">
       <SectionHeader 
         subtitle="Why Vietnam, Why Now" 
@@ -334,7 +334,7 @@ const Vietnam = () => (
 );
 
 const TripSection = () => (
-  <section id="trip" className="py-16 lg:py-24 border-t border-border-subtle bg-bg-dark">
+  <section id="trip" className="py-20 lg:py-28 border-t border-border-subtle bg-bg-dark">
     <div className="max-w-7xl mx-auto px-6">
       <SectionHeader 
         subtitle="The Experience" 
@@ -357,7 +357,7 @@ const TripSection = () => (
               ["Format", "Private · Hand-picked"],
               ["Hosts", "100B × LT Commercial Group"],
             ].map(([l, v], i) => (
-              <div className="flex bg-bg-card rounded-2xl p-6 items-center" key={i}>
+              <div className="flex bg-bg-card rounded-2xl p-6 items-center shadow-lg" key={i}>
                 <span className="w-1/3 text-xs lg:text-sm uppercase tracking-[0.15em] font-medium text-brand-gold">{l}</span>
                 <span className="w-2/3 text-text-heading font-medium text-base lg:text-lg">{v}</span>
               </div>
@@ -402,7 +402,7 @@ const TripSection = () => (
                 >
                   {/* Left Column: Day and Date */}
                   <div className="md:w-[130px] lg:w-[150px] shrink-0 pt-4 pb-1 md:py-[22px] pl-6 pr-4 md:border-r border-white/5 flex flex-row md:flex-col items-baseline md:items-start gap-2 md:gap-1.5 focus:outline-none">
-                    <div className="text-text-heading font-bold text-base lg:text-lg">{r.day}</div>
+                    <div className="text-text-heading font-bold text-base lg:text-lg">{r.day.split(/(\d+)/).map((chunk, k) => /^\d+$/.test(chunk) ? <span key={k} className="font-display font-medium">{chunk}</span> : chunk)}</div>
                     <div className="text-[11px] lg:text-xs text-text-muted font-medium">{r.date}</div>
                   </div>
                   
@@ -476,7 +476,7 @@ const Factories = () => {
   };
 
   return (
-    <section id="factories" className="py-16 lg:py-24 border-t border-border-subtle bg-bg-alt">
+    <section id="factories" className="py-20 lg:py-28 border-t border-border-subtle bg-bg-alt">
       <div className="max-w-7xl mx-auto px-6">
         <SectionHeader 
           subtitle="The Manufacturers" 
@@ -590,7 +590,7 @@ const Factories = () => {
 };
 
 const Hosts = () => (
-  <section id="hosts" className="py-16 lg:py-24 border-t border-border-subtle bg-bg-dark">
+  <section id="hosts" className="py-20 lg:py-28 border-t border-border-subtle bg-bg-dark">
     <div className="max-w-7xl mx-auto px-6">
       <SectionHeader 
         subtitle="Your Hosts" 
@@ -613,9 +613,10 @@ const Hosts = () => (
             img: "/logos/Lezlie.jpg"
           }
         ].map((h, i) => (
-          <article className="bg-bg-card rounded-3xl p-16 flex flex-col items-center text-center group hover:bg-bg-card-hover transition-colors" key={i}>
+          <article className="relative bg-bg-card rounded-3xl p-16 flex flex-col items-center text-center group hover:bg-bg-card-hover transition-colors shadow-lg" key={i}>
+            <div className="absolute top-6 left-8 text-[40px] font-display text-gradient-gold leading-none font-medium">0{i + 1}</div>
             <div className="w-48 h-48 rounded-full overflow-hidden mb-8 border-2 border-brand-gold/30 group-hover:border-brand-gold transition-colors p-1">
-              <img src={h.img} alt={h.name} className="w-full h-full object-cover rounded-full filter grayscale group-hover:grayscale-0 transition-all duration-500" referrerPolicy="no-referrer" />
+              <img src={h.img} alt={h.name} className="w-full h-full object-cover rounded-full" referrerPolicy="no-referrer" />
             </div>
             <h3 className="text-4xl font-serif font-medium text-text-heading mb-4">{h.name}</h3>
             <div className="text-sm lg:text-base uppercase tracking-[0.2em] font-medium text-brand-gold mb-6">{h.role}</div>
