@@ -94,6 +94,13 @@ const Navigation = () => {
   );
 };
 
+const renderWithDisplayDigits = (text: string) =>
+  text.split(/(\d+)/).map((chunk, i) =>
+    /^\d+$/.test(chunk)
+      ? <span key={i} className="font-display">{chunk}</span>
+      : <React.Fragment key={i}>{chunk}</React.Fragment>
+  );
+
 const SectionHeader = ({ subtitle, title, titleAccent }: { subtitle: string, title: string, titleAccent?: string }) => (
   <div className="mb-10 lg:mb-14">
     <div className="flex items-center gap-4 mb-4">
@@ -103,9 +110,9 @@ const SectionHeader = ({ subtitle, title, titleAccent }: { subtitle: string, tit
     <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light leading-tight text-text-heading max-w-3xl">
       {title.split(titleAccent || '').map((part, i, arr) => (
         <React.Fragment key={i}>
-          {part}
+          {renderWithDisplayDigits(part)}
           {i < arr.length - 1 && titleAccent && (
-            <em className="font-serif italic text-gradient-gold pr-1">{titleAccent}</em>
+            <em className="font-serif italic text-gradient-gold pr-1">{renderWithDisplayDigits(titleAccent)}</em>
           )}
         </React.Fragment>
       ))}
@@ -165,7 +172,7 @@ const Hero = () => (
         </div>
         <div className="flex items-center gap-3 lg:gap-4 p-4 bg-bg-card/80 backdrop-blur-md rounded-2xl border border-white/10 hover:border-brand-gold/50 transition-colors h-full text-white/80">
           <Building className="text-brand-gold shrink-0" size={20} />
-          <div className="text-xs xl:text-sm"><strong className="text-white font-semibold font-display">12</strong> Factories</div>
+          <div className="text-xs xl:text-sm"><strong className="text-white font-semibold">12</strong> Factories</div>
         </div>
         <div className="flex items-center gap-3 lg:gap-4 p-4 bg-bg-card/80 backdrop-blur-md rounded-2xl border border-white/10 hover:border-brand-gold/50 transition-colors h-full text-white/80">
           <Users className="text-brand-gold shrink-0" size={20} />
