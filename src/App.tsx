@@ -616,7 +616,7 @@ const Hosts = () => (
           <article className="relative bg-bg-card rounded-3xl p-16 flex flex-col items-center text-center group hover:bg-bg-card-hover transition-colors shadow-lg" key={i}>
             <div className="absolute top-6 left-8 text-[40px] font-display text-gradient-gold leading-none font-medium">0{i + 1}</div>
             <div className="w-48 h-48 rounded-full overflow-hidden mb-8 border-2 border-brand-gold/30 group-hover:border-brand-gold transition-colors p-1">
-              <img src={h.img} alt={h.name} className="w-full h-full object-cover rounded-full filter grayscale group-hover:grayscale-0 transition-all duration-500" referrerPolicy="no-referrer" />
+              <img src={h.img} alt={h.name} className="w-full h-full object-cover rounded-full" referrerPolicy="no-referrer" />
             </div>
             <h3 className="text-4xl font-serif font-medium text-text-heading mb-4">{h.name}</h3>
             <div className="text-sm lg:text-base uppercase tracking-[0.2em] font-medium text-brand-gold mb-6">{h.role}</div>
