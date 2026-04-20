@@ -42,13 +42,7 @@ const Navigation = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-bg-dark/95 backdrop-blur-md border-b border-border-subtle py-4' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
-          <div className="flex items-center gap-3">
-            <img src="/logos/100B%20-%20TACH%20NEN%20-1.png" alt="100B" className="h-8 md:h-9 w-auto object-contain" />
-            <span className={`text-brand-gold text-sm opacity-60 transition-colors ${isScrolled ? 'text-brand-gold' : 'text-white/60'}`}>×</span>
-            <img src="/logos/LOGO%20LT%20COMMERCIAL.png" alt="LT Commercial Group" className="h-8 md:h-9 w-auto object-contain" />
-          </div>
-          <div className={`hidden md:block w-px h-6 mx-2 transition-colors ${isScrolled ? 'bg-border-subtle' : 'bg-white/30'}`}></div>
-          <div className="hidden md:flex flex-col">
+          <div className="flex flex-col">
             <span className="text-sm font-serif text-brand-gold">Vietnam Direct 2026</span>
             <span className={`text-[10px] uppercase tracking-widest font-medium transition-colors ${isScrolled ? 'text-text-body' : 'text-white/70'}`}>Build Better Series</span>
           </div>
