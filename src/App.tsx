@@ -43,6 +43,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <img src="/logos/100B%20-%20TACH%20NEN%20-1.png" alt="100B" className="h-8 md:h-9 w-auto object-contain" />
+          <span className="text-brand-gold text-xs opacity-60">×</span>
           <img src="/logos/LOGO%20LT%20COMMERCIAL.png" alt="LT Commercial Group" className="h-8 md:h-9 w-auto object-contain" />
         </div>
 
@@ -141,9 +142,6 @@ const Hero = () => (
       <div className="max-w-4xl relative z-10 w-full mt-10 md:mt-0">
         <div className="flex flex-wrap items-center justify-start gap-3 mb-6">
           <span className="text-[11px] uppercase tracking-[0.2em] px-3 py-1 border border-white/20 text-white font-medium rounded-full">
-            100B <span className="mx-1 opacity-60">×</span> LT Commercial Group
-          </span>
-          <span className="text-[11px] uppercase tracking-[0.2em] px-3 py-1 border border-white/20 text-white font-medium rounded-full">
             Build Better Series
           </span>
           <span className="text-[11px] uppercase tracking-[0.2em] px-3 py-1 border border-brand-gold text-brand-gold font-medium rounded-full">
@@ -168,7 +166,7 @@ const Hero = () => (
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr_1fr_2.5fr] gap-3 md:gap-4 text-left items-stretch">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 md:gap-4 text-left items-stretch">
         <div className="flex items-center gap-3 lg:gap-4 p-4 bg-bg-card/80 backdrop-blur-md rounded-2xl border border-white/10 hover:border-brand-gold/50 transition-colors h-full text-white/80">
           <Calendar className="text-brand-gold shrink-0" size={20} />
           <div className="text-xs xl:text-sm"><strong className="text-white font-semibold">7 Days</strong></div>
