@@ -206,7 +206,7 @@ const Problem = () => (
               {prob.icon}
             </div>
             <h3 className="text-lg lg:text-xl font-bold text-white mb-2 font-sans tracking-tight">{prob.title}</h3>
-            <p className="text-sm lg:text-base font-light text-text-body leading-relaxed italic">
+            <p className="text-sm lg:text-base font-light text-text-body leading-relaxed">
               {prob.body}
             </p>
           </article>
@@ -263,7 +263,7 @@ const Opportunity = () => (
             <h3 className="text-gradient-gold text-base lg:text-lg font-sans font-medium uppercase tracking-[0.1em] mb-4">
               {s.h}
             </h3>
-            <div className="flex items-start gap-4 mt-auto">
+            <div className="flex items-start gap-4">
               <div className="w-6 h-6 flex items-center justify-center shrink-0 mt-0.5 icon-silver-gradient">
                 <Check className="text-[#111]" size={14} strokeWidth={3} />
               </div>
@@ -313,7 +313,7 @@ const Vietnam = () => (
           <article className="bg-bg-card rounded-3xl p-6 lg:p-8 flex flex-col shadow-lg" key={i}>
             <div className="text-[40px] font-display text-gradient-gold mb-2 leading-none font-medium">{v.n}</div>
             <h3 className="text-gradient-gold text-base lg:text-lg font-sans font-medium uppercase tracking-[0.1em] mb-4">{v.t}</h3>
-            <div className="flex items-start gap-4 mt-auto">
+            <div className="flex items-start gap-4">
               <div className="w-6 h-6 flex items-center justify-center shrink-0 mt-0.5 icon-silver-gradient">
                 <Check className="text-[#111]" size={14} strokeWidth={3} />
               </div>
