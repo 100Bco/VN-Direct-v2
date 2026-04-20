@@ -42,10 +42,10 @@ const Navigation = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-bg-dark/95 backdrop-blur-md border-b border-border-subtle py-4' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
-          <div className={`text-xl font-serif font-bold tracking-tight flex items-center gap-2 transition-colors ${isScrolled ? 'text-text-heading' : 'text-white'}`}>
-            1<span className="text-gradient-gold">00</span>B
-            <span className="text-brand-gold text-sm mx-1 opacity-60">×</span>
-            <span className="tracking-widest">LT</span>
+          <div className="flex items-center gap-3">
+            <img src="/logos/100b-logo.png" alt="100B" className="h-8 md:h-9 w-auto object-contain" />
+            <span className={`text-brand-gold text-sm opacity-60 transition-colors ${isScrolled ? 'text-brand-gold' : 'text-white/60'}`}>×</span>
+            <img src="/logos/lt-logo.png" alt="LT Commercial Group" className="h-8 md:h-9 w-auto object-contain" />
           </div>
           <div className={`hidden md:block w-px h-6 mx-2 transition-colors ${isScrolled ? 'bg-border-subtle' : 'bg-white/30'}`}></div>
           <div className="hidden md:flex flex-col">
@@ -143,9 +143,6 @@ const Hero = () => (
         <div className="flex flex-wrap items-center justify-start gap-3 mb-6">
           <span className="text-[11px] uppercase tracking-[0.2em] px-3 py-1 border border-white/20 text-white font-medium rounded-full">
             Build Better Series
-          </span>
-          <span className="text-[11px] uppercase tracking-[0.2em] px-3 py-1 border border-white/20 text-white font-medium rounded-full">
-            100B × LT Commercial Group
           </span>
           <span className="text-[11px] uppercase tracking-[0.2em] px-3 py-1 border border-brand-gold text-brand-gold font-medium rounded-full">
             By Invitation Only
