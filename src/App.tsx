@@ -165,7 +165,7 @@ const Hero = () => (
         </div>
         <div className="flex items-center gap-3 lg:gap-4 p-4 bg-bg-card/80 backdrop-blur-md rounded-2xl border border-white/10 hover:border-brand-gold/50 transition-colors h-full text-white/80">
           <Building className="text-brand-gold shrink-0" size={20} />
-          <div className="text-xs xl:text-sm"><strong className="text-white font-semibold">12</strong> Factories</div>
+          <div className="text-xs xl:text-sm"><strong className="text-white font-semibold font-display">12</strong> Factories</div>
         </div>
         <div className="flex items-center gap-3 lg:gap-4 p-4 bg-bg-card/80 backdrop-blur-md rounded-2xl border border-white/10 hover:border-brand-gold/50 transition-colors h-full text-white/80">
           <Users className="text-brand-gold shrink-0" size={20} />
@@ -417,7 +417,7 @@ const TripSection = () => (
         </div>
       </div>
 
-      <div className="mt-16 md:mt-24 pt-12 md:pt-16 border-t border-border-subtle max-w-3xl mx-auto text-center flex flex-col justify-center items-center">
+      <div className="mt-8 pt-8 border-t border-border-subtle max-w-3xl mx-auto text-center flex flex-col justify-center items-center">
         <span className="text-[11px] lg:text-xs uppercase tracking-[0.2em] font-semibold text-brand-gold mb-4 inline-block px-4 py-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/5">Optional Add-On</span>
         <p className="text-text-body text-base lg:text-lg leading-relaxed">
           Extend <strong className="text-text-heading font-medium">1–2 days of sightseeing</strong> and hang out with the <strong className="text-text-heading font-medium">Greater Austin Asian Chamber of Commerce</strong> on <strong className="text-text-heading font-medium">Jun 6–7</strong> in Hanoi and Ha Long Bay.
