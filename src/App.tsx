@@ -141,6 +141,9 @@ const Hero = () => (
       <div className="max-w-4xl relative z-10 w-full mt-10 md:mt-0">
         <div className="flex flex-wrap items-center justify-start gap-3 mb-6">
           <span className="text-[11px] uppercase tracking-[0.2em] px-3 py-1 border border-white/20 text-white font-medium rounded-full">
+            100B <span className="mx-1 opacity-60">×</span> LT Commercial Group
+          </span>
+          <span className="text-[11px] uppercase tracking-[0.2em] px-3 py-1 border border-white/20 text-white font-medium rounded-full">
             Build Better Series
           </span>
           <span className="text-[11px] uppercase tracking-[0.2em] px-3 py-1 border border-brand-gold text-brand-gold font-medium rounded-full">
@@ -172,11 +175,11 @@ const Hero = () => (
         </div>
         <div className="flex items-center gap-3 lg:gap-4 p-4 bg-bg-card/80 backdrop-blur-md rounded-2xl border border-white/10 hover:border-brand-gold/50 transition-colors h-full text-white/80">
           <Building className="text-brand-gold shrink-0" size={20} />
-          <div className="text-xs xl:text-sm"><strong className="text-white font-semibold">12</strong> Factories</div>
+          <div className="text-xs xl:text-sm"><strong className="text-white font-semibold">10-12</strong> Hand-Picked Factories</div>
         </div>
         <div className="flex items-center gap-3 lg:gap-4 p-4 bg-bg-card/80 backdrop-blur-md rounded-2xl border border-white/10 hover:border-brand-gold/50 transition-colors h-full text-white/80">
           <Users className="text-brand-gold shrink-0" size={20} />
-          <div className="text-xs xl:text-sm"><strong className="text-white font-semibold">Limited Seats</strong></div>
+          <div className="text-xs xl:text-sm"><strong className="text-white font-semibold">Limited Seats</strong> · Vetted Attendees</div>
         </div>
         <div className="flex items-center gap-3 lg:gap-4 p-4 bg-bg-card/80 backdrop-blur-md rounded-2xl border border-white/10 hover:border-brand-gold/50 transition-colors h-full text-white/80">
           <Award className="text-brand-gold shrink-0" size={20} />
@@ -239,10 +242,10 @@ const Opportunity = () => (
       {/* Stats Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
         {[
-          { n: "20–25%", l: "Savings going direct vs.\nD2C" },
-          { n: "$17.5B", l: "Vietnam's annual exports\n2024" },
-          { n: "D2C", l: "Factory to job site.\nNo markup." },
-          { n: "3–4×", l: "Domestic markup\nbeing paid" },
+          { n: "20–25%", l: "Savings going direct vs. domestic distribution" },
+          { n: "$17.5B", l: "Vietnam's annual construction & furniture exports in 2024" },
+          { n: "D2C", l: "Factory to job site. No markup." },
+          { n: "3–4×", l: "The markup you're currently paying through domestic distributors" },
         ].map((stat, i) => (
           <div key={i} className="bg-bg-card rounded-3xl p-8 flex flex-col justify-center text-center items-center shadow-lg">
             <span className="text-[48px] md:text-[64px] font-display text-gradient-gold mb-2 lining-nums tracking-tight font-light leading-none">{stat.n}</span>
@@ -258,12 +261,12 @@ const Opportunity = () => (
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
         {[
-          { h: "Factory Audit & Vetting", b: "Pre-screened manufacturers. You visit knowing it's already approved." },
-          { h: "Quality Control", b: "Ground QC before shipment. Pre-production & mid-run checks." },
-          { h: "Logistics & Freight", b: "Container loading, customs, freight forwarding, to your site." },
-          { h: "Our Procurement Team", b: "No overseas team needed. We are your team — spec to delivery." },
-          { h: "Savings Across Stack", b: "The 20–25% flows to GCs & investors — improving returns." },
-          { h: "Access to Capital", b: "Connect US projects with Vietnamese HNWIs seeking US exposure." },
+          { h: "Factory Audit & Vetting", b: "We pre-screen every manufacturer. You visit knowing it's already approved." },
+          { h: "Quality Control", b: "Ground QC before every shipment. Pre-production samples, mid-run checks, final inspection." },
+          { h: "Logistics & Freight", b: "Container loading, customs, freight forwarding, delivery to your job site — all handled." },
+          { h: "Our Procurement Team", b: "No overseas team needed. We are your team — spec to delivery. D2C economics without the overhead." },
+          { h: "Savings Across Stack", b: "The 20–25% flows to GCs & investors — improving returns at every level of the deal." },
+          { h: "Access to Capital", b: "Connect US projects with Vietnamese HNWIs seeking US real estate exposure." },
         ].map((s, idx) => (
           <article className="bg-bg-card rounded-3xl p-6 lg:p-8 flex flex-col shadow-lg" key={idx}>
             <div className="text-[40px] font-display text-gradient-gold mb-2 leading-none font-medium">0{idx + 1}</div>
@@ -294,10 +297,10 @@ const Vietnam = () => (
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
         {[
-          { n: "2nd", l: "Largest furniture exporter globally" },
-          { n: "$124B", l: "US trade deficit with Vietnam (2024)" },
-          { n: "$25B", l: "Record FDI into Vietnam in 2024" },
-          { n: "60-70%", l: "Lower manufacturing cost vs. China" },
+          { n: "2nd", l: "Largest furniture exporter globally – right behind China" },
+          { n: "$124B", l: "US trade deficit with Vietnam (2024) – 4th largest globally" },
+          { n: "$25B", l: "Record FDI into Vietnam in 2024 – manufacturers keep coming" },
+          { n: "60%", l: "Lower manufacturing cost vs. China" },
         ].map((stat, i) => (
           <div key={i} className="bg-bg-card hover:bg-bg-card-hover transition-colors rounded-3xl p-6 lg:p-8 flex flex-col items-center text-center shadow-lg">
             <div className="w-16 h-16 rounded-full bg-gradient-to-b from-[#4A4A4A] to-[#1A1A1A] flex items-center justify-center mb-6 shadow-inner border border-white/5">
@@ -311,10 +314,10 @@ const Vietnam = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
         {[
           { n: "01", t: "US–China Trade War", b: "Tariffs of 25–145% permanently shifted supply chains. Vietnam is the #1 beneficiary." },
-          { n: "02", t: "World-Class Quality", b: "Factories hold ASTM, LEED, ISO, FSC. Suppliers for CA's tallest building & US Marriotts." },
-          { n: "03", t: "Mature Export Routes", b: "Vietnam exported $405B in goods in 2024. Port infra & freight to US are established." },
-          { n: "04", t: "Durable Advantage", b: "60–70% lower labor and land costs create a structural price advantage." },
-          { n: "05", t: "Strategic Partner", b: "Comprehensive Strategic Partnership with US established 2023. Backed stability." },
+          { n: "02", t: "Mature Export Routes", b: "Vietnam exported $405B in goods in 2024. Port infra & freight to the US are established." },
+          { n: "03", t: "World-Class Quality", b: "Factories on this trip hold ASTM, LEED, ISO, FSC certifications. Suppliers for CA's tallest building & US Marriotts." },
+          { n: "04", t: "Strategic Partner", b: "Comprehensive Strategic Partnership with US established 2023 – highest diplomatic tier. Government-backed stability for long-term bilateral relationships." },
+          { n: "05", t: "Durable Advantage", b: "60–70% lower labor and land costs create a structural price advantage." },
           { n: "06", t: "Early Movers Win", b: "Best factories are selective. Early relationships get better pricing & capacity." },
         ].map((v, i) => (
           <article className="bg-bg-card rounded-3xl p-6 lg:p-8 flex flex-col shadow-lg" key={i}>
@@ -336,9 +339,9 @@ const Vietnam = () => (
 const TripSection = () => (
   <section id="trip" className="py-20 lg:py-28 border-t border-border-subtle bg-bg-dark">
     <div className="max-w-7xl mx-auto px-6">
-      <SectionHeader 
-        subtitle="The Experience" 
-        title="7 days. 12 factories. Zero fluff."
+      <SectionHeader
+        subtitle="The Experience"
+        title="7 days. 10-12 factories. Zero fluff."
         titleAccent="Zero fluff."
       />
 
@@ -425,9 +428,9 @@ const TripSection = () => (
       </div>
 
       <div className="mt-8 pt-8 border-t border-border-subtle max-w-3xl mx-auto text-center flex flex-col justify-center items-center">
-        <span className="text-[11px] lg:text-xs uppercase tracking-[0.2em] font-semibold text-brand-gold mb-4 inline-block px-4 py-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/5">Optional Add-On</span>
+        <span className="text-[11px] lg:text-xs uppercase tracking-[0.2em] font-semibold text-brand-gold mb-4 inline-block px-4 py-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/5">Optional Add-On $700</span>
         <p className="text-text-body text-base lg:text-lg leading-relaxed">
-          Extend <strong className="text-text-heading font-medium">1–2 days of sightseeing</strong> and hang out with the <strong className="text-text-heading font-medium">Greater Austin Asian Chamber of Commerce</strong> on <strong className="text-text-heading font-medium">Jun 6–7</strong> in Hanoi and Ha Long Bay.
+          Extend <strong className="text-text-heading font-medium">2 days of sightseeing</strong> and hang out with the <strong className="text-text-heading font-medium">Greater Austin Asian Chamber of Commerce</strong> on <strong className="text-text-heading font-medium">Jun 6–7</strong> in Hanoi and Ha Long Bay on a yacht.
         </p>
         <a href="https://austin2vietnam.100b.co/" target="_blank" rel="noopener noreferrer" className="group mt-6 inline-flex items-center gap-2 text-text-heading hover:text-brand-gold uppercase tracking-[0.15em] text-[12px] lg:text-[13px] font-bold transition-colors">
           <span className="border-b border-transparent group-hover:border-brand-gold/50 transition-colors pb-0.5">View GAACC trip</span>
@@ -670,8 +673,8 @@ const Footer = () => (
         <div className="text-xs uppercase tracking-[0.15em] text-text-body">Build Better Series</div>
       </div>
       <div className="text-center md:text-right text-xs text-text-body leading-relaxed opacity-60">
-        Made in Vietnam, Consumed Worldwide<br />
-        100b.co
+        Made in Vietnam. Consumed Worldwide.<br />
+        Powered by 100Bold
       </div>
     </div>
   </footer>
