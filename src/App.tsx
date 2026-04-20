@@ -460,10 +460,23 @@ const Factories = () => {
     
     { id: "07", name: "Eurowindow", loc: "Hanoi", type: "Aluminum + uPVC Windows/Doors · Curtain Walls · Timber Doors", rating: 4, hub: "NORTH — HANOI HUB · JUN 3 – JUN 6", details: ["Vietnam's pioneer in modern window solutions.", "Massive scale and diverse product lines.", "Strong international quality certifications."] },
     { id: "08", name: "Tonmat Group", loc: "Bac Ninh", type: "Insulated Roof + Wall Panels · Metal Roofing · Color-Coated Steel", rating: 5, hub: "NORTH", details: ["Leader in insulated sandwich panels (PU, PIR, Rockwool).", "Essential for modern, energy-efficient building envelopes.", "High automated production capacity."] },
-    { id: "09", name: "Amy Grupo", loc: "Vinh Phuc", type: "Tile · SPC/LVT Flooring · WPC Decking · Wall Panels", rating: 5, hub: "NORTH", details: ["Rapidly growing manufacturer of advanced flooring.", "High-tech production lines producing world-class SPC.", "Strong focus on US export market standards."] },
-    { id: "10", name: "An Phat Holdings", loc: "Hai Phong", type: "SPC/LVT Flooring · PVC Wall Panels · Wall Cladding", rating: 4, hub: "NORTH", details: ["Major plastics conglomerate with dedicated high-tech building materials division.", "Huge scale and raw material integration advantage.", "Reliable OEM partner for global brands."] },
-    { id: "11", name: "Tien Phong Plastic", loc: "Hai Phong", type: "PVC + HDPE Pipes · Pipe Fittings · Plumbing Systems", rating: 2, hub: "NORTH", details: ["Vietnam's oldest and largest pipe manufacturer.", "Supplies major infrastructure and residential projects domestically.", "Exploring OEM and export opportunities."] },
-    { id: "12", name: "Hoa Phat Group", loc: "Hanoi · Meeting Format", type: "Construction Steel · Galvanized + Color-Coated Steel · Metal Roofing", rating: 4, hub: "NORTH", details: ["Vietnam's largest steelmaker and top industrial conglomerate.", "World-class blast furnace technology.", "Supplies raw materials that drive construction costs globally."] },
+    { id: "09", name: "EuroStark (EuP Group)", loc: "Yen Bai Province — ~3.5 hrs from Hanoi ⚠️", type: "WPC Decking · Cladding · Fencing · Outdoor Furniture", rating: 4, hub: "NORTH", stats: [
+      ["EST. REVENUE", "$320M (EuP Group parent)"],
+      ["FACTORY", "150,000 m²"],
+      ["CAPACITY", "90 containers/month"],
+      ["CERTIFICATIONS", "ISO 9001 · ISO 14001 · FSC · BSCI · TÜV/SGS"],
+      ["EXPORT", "Germany · France · Italy · NZ · Colombia"],
+    ], details: [
+      "Subsidiary of EuP Group — the world's #1 filler masterbatch producer. Raw material is made in-house, meaning consistent quality and pricing advantage no competitor can match.",
+      "OEM/ODM specialist: WPC decking (standard + premium co-extrusion), wall cladding, DIY fencing, WPC gates, outdoor tables/chairs, shower plates — comprehensive outdoor living catalog.",
+      "ISO 9001, ISO 14001, FSC, BSCI Level B, Intertek, TÜV/SGS certified — documentation is export-ready for US buyers.",
+      "Already shipping to European DIY retailers at scale — the US is their next target market.",
+      "⚠️ Location note: Yen Bai Province is ~3.5 hours from Hanoi. Best scheduled as a dedicated day trip or overnight, not combined with other Hanoi-area stops."
+    ] },
+    { id: "10", name: "Amy Grupo", loc: "Vinh Phuc", type: "Tile · SPC/LVT Flooring · WPC Decking · Wall Panels", rating: 5, hub: "NORTH", details: ["Rapidly growing manufacturer of advanced flooring.", "High-tech production lines producing world-class SPC.", "Strong focus on US export market standards."] },
+    { id: "11", name: "An Phat Holdings", loc: "Hai Phong", type: "SPC/LVT Flooring · PVC Wall Panels · Wall Cladding", rating: 4, hub: "NORTH", details: ["Major plastics conglomerate with dedicated high-tech building materials division.", "Huge scale and raw material integration advantage.", "Reliable OEM partner for global brands."] },
+    { id: "12", name: "Tien Phong Plastic", loc: "Hai Phong", type: "PVC + HDPE Pipes · Pipe Fittings · Plumbing Systems", rating: 2, hub: "NORTH", details: ["Vietnam's oldest and largest pipe manufacturer.", "Supplies major infrastructure and residential projects domestically.", "Exploring OEM and export opportunities."] },
+    { id: "13", name: "Hoa Phat Group", loc: "Hanoi · Meeting Format", type: "Construction Steel · Galvanized + Color-Coated Steel · Metal Roofing", rating: 4, hub: "NORTH", details: ["Vietnam's largest steelmaker and top industrial conglomerate.", "World-class blast furnace technology.", "Supplies raw materials that drive construction costs globally."] },
   ];
 
   const renderStars = (rating: number) => {
@@ -481,7 +494,7 @@ const Factories = () => {
       <div className="max-w-7xl mx-auto px-6">
         <SectionHeader 
           subtitle="The Manufacturers" 
-          title="12 factories. All vetted. All relevant."
+          title="13 factories. All vetted. All relevant."
           titleAccent="All vetted. All relevant."
         />
         
@@ -548,24 +561,27 @@ const Factories = () => {
                   {/* Expanded Content */}
                   {isOpen && (
                     <div className="p-8 lg:p-10 pt-0 lg:ml-[80px] border-t border-border-subtle lg:border-t-0 lg:grid lg:grid-cols-[1fr_2.5fr] gap-12 mt-4 lg:mt-0">
-                      {f.estRev ? (
-                        <div className="grid grid-cols-2 gap-4 mb-8 lg:mb-0">
-                          {[
-                            ["EST. REVENUE", f.estRev],
-                            ["FACTORY", f.size],
-                            ["MKT SHARE", f.mkt],
-                            ["INVESTORS", f.inv],
-                            ["US PRESENCE", f.us]
-                          ].filter(x => x[1]).map(([label, val], idx) => (
-                            <div className={`${idx === 4 ? 'col-span-2' : ''} bg-bg-dark rounded-2xl p-6 flex flex-col justify-center`} key={label}>
-                              <span className="text-[10px] lg:text-[11px] uppercase tracking-[0.2em] font-semibold text-brand-gold/80 mb-2">{label}</span>
-                              <span className="text-base font-medium text-text-heading">{val}</span>
-                            </div>
-                          ))}
-                        </div>
-                      ) : (
-                        <div className="hidden lg:block"></div>
-                      )}
+                      {(() => {
+                        const statPairs = f.stats ?? [
+                          ["EST. REVENUE", f.estRev],
+                          ["FACTORY", f.size],
+                          ["MKT SHARE", f.mkt],
+                          ["INVESTORS", f.inv],
+                          ["US PRESENCE", f.us],
+                        ].filter(x => x[1]) as [string, string][];
+                        return statPairs.length > 0 ? (
+                          <div className="grid grid-cols-2 gap-4 mb-8 lg:mb-0">
+                            {statPairs.map(([label, val], idx, arr) => (
+                              <div className={`${idx === arr.length - 1 && arr.length % 2 === 1 ? 'col-span-2' : ''} bg-bg-dark rounded-2xl p-6 flex flex-col justify-center`} key={label}>
+                                <span className="text-[10px] lg:text-[11px] uppercase tracking-[0.2em] font-semibold text-brand-gold/80 mb-2">{label}</span>
+                                <span className="text-base font-medium text-text-heading">{val}</span>
+                              </div>
+                            ))}
+                          </div>
+                        ) : (
+                          <div className="hidden lg:block"></div>
+                        );
+                      })()}
                       
                       <div className="lg:py-4">
                         <span className="text-[11px] lg:text-xs uppercase tracking-[0.2em] font-semibold text-brand-gold mb-5 block">Why Visit</span>
