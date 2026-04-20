@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-gold: #C3A374;
+  --color-brand-gold-hover: #D7B788;
+  --color-brand-gold-dim: #937C54;
+  --color-bg-dark: #000000;
+  --color-bg-alt: #161513;
+  --color-bg-card: #201E1B;
+  --color-bg-card-hover: #2B2824;
+  --color-text-heading: #FFFFFF;
+  --color-text-body: #C4BEB2;
+  --color-text-muted: #8F8B82;
+  --color-border-subtle: rgba(255, 255, 255, 0.06);
+
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'UTM ClassizismAntiqua', 'Cormorant Garamond', ui-serif, Georgia, serif;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-dark text-text-body font-sans antialiased selection:bg-brand-gold/30 selection:text-text-heading;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-text-heading font-serif;
+  }
+}
+
+@layer components {
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #C3A374 0%, #937C54 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .btn-silver-gradient {
+    @apply relative overflow-hidden font-bold transition-all duration-300;
+    color: #050505;
+    background: linear-gradient(105deg, 
+      #e0e0e0 0%, 
+      #fdfdfd 22%, 
+      #ffffff 30%, 
+      #e3e3e3 45%, 
+      #bfbfbf 65%, 
+      #8f8f8f 85%, 
+      #5c5c5c 100%
+    );
+    box-shadow: 
+      inset 0 1px 2px rgba(255, 255, 255, 0.9), 
+      inset 0 -1px 2px rgba(0, 0, 0, 0.2),
+      0 4px 15px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .btn-silver-gradient:hover {
+    background: linear-gradient(105deg, 
+      #ececec 0%, 
+      #ffffff 20%, 
+      #ffffff 32%, 
+      #ebebeb 48%, 
+      #c9c9c9 68%, 
+      #9c9c9c 88%, 
+      #6b6b6b 100%
+    );
+    box-shadow: 
+      inset 0 1px 2px rgba(255, 255, 255, 1), 
+      inset 0 -1px 2px rgba(0, 0, 0, 0.15),
+      0 6px 20px rgba(0, 0, 0, 0.6);
+    transform: translateY(-1px);
+  }
+  .icon-silver-gradient {
+    @apply relative flex items-center justify-center rounded-full text-[#111] shadow-sm;
+    background: linear-gradient(135deg, 
+      #e6e6e6 0%, 
+      #ffffff 25%, 
+      #cccccc 50%, 
+      #999999 75%,
+      #666666 100%
+    );
+    box-shadow: inset 0 1px 2px rgba(255,255,255,0.9), 0 2px 5px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+}
+
+
