@@ -43,9 +43,9 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-3">
-            <img src="/logos/100b-logo.png" alt="100B" className="h-8 md:h-9 w-auto object-contain" />
+            <img src="/logos/100B%20-%20TACH%20NEN%20-1.png" alt="100B" className="h-8 md:h-9 w-auto object-contain" />
             <span className={`text-brand-gold text-sm opacity-60 transition-colors ${isScrolled ? 'text-brand-gold' : 'text-white/60'}`}>×</span>
-            <img src="/logos/lt-logo.png" alt="LT Commercial Group" className="h-8 md:h-9 w-auto object-contain" />
+            <img src="/logos/LOGO%20LT%20COMMERCIAL.png" alt="LT Commercial Group" className="h-8 md:h-9 w-auto object-contain" />
           </div>
           <div className={`hidden md:block w-px h-6 mx-2 transition-colors ${isScrolled ? 'bg-border-subtle' : 'bg-white/30'}`}></div>
           <div className="hidden md:flex flex-col">
@@ -660,11 +660,16 @@ const CTA = () => (
 const Footer = () => (
   <footer className="py-12 border-t border-border-subtle bg-bg-dark">
     <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-      <div>
-        <div className="font-serif font-bold text-text-heading text-xl mb-2">Vietnam Direct 2026</div>
-        <div className="text-xs uppercase tracking-[0.15em] text-text-body">Build Better Series · 100B × LT Commercial Group</div>
+      <div className="flex flex-col items-center md:items-start gap-3">
+        <div className="flex items-center gap-3">
+          <img src="/logos/100B%20-%20TACH%20NEN%20-1.png" alt="100B" className="h-8 w-auto object-contain" />
+          <span className="text-brand-gold text-sm opacity-60">×</span>
+          <img src="/logos/LOGO%20LT%20COMMERCIAL.png" alt="LT Commercial Group" className="h-8 w-auto object-contain" />
+        </div>
+        <div className="font-serif font-bold text-text-heading text-xl">Vietnam Direct 2026</div>
+        <div className="text-xs uppercase tracking-[0.15em] text-text-body">Build Better Series</div>
       </div>
-      <div className="text-right text-xs text-text-body leading-relaxed opacity-60">
+      <div className="text-center md:text-right text-xs text-text-body leading-relaxed opacity-60">
         Made in Vietnam, Consumed Worldwide<br />
         100b.co
       </div>
