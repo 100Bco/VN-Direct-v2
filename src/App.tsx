@@ -593,17 +593,17 @@ const Hosts = () => (
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
         {[
-          { 
-            name: "Minh Mac", 
-            role: "Founder · 100B", 
-            email: "global@100b.co", 
-            img: "https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&q=80&w=400&h=400" 
+          {
+            name: "Minh Mac",
+            role: "Founder · 100B",
+            email: "global@100b.co",
+            img: "/logos/Minh%20Mac%20CEO.jpeg"
           },
-          { 
-            name: "Lezlie Tram", 
-            role: "CEO · LT Commercial Group", 
-            email: "lezlie@ltcommercialgroup.com", 
-            img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400&h=400" 
+          {
+            name: "Lezlie Tram",
+            role: "CEO · LT Commercial Group",
+            email: "lezlie@ltcommercialgroup.com",
+            img: "/logos/Lezlie.jpg"
           }
         ].map((h, i) => (
           <article className="bg-bg-card rounded-3xl p-16 flex flex-col items-center text-center group hover:bg-bg-card-hover transition-colors" key={i}>
