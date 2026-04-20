@@ -165,7 +165,7 @@ const Hero = () => (
         </div>
         <div className="flex items-center gap-3 lg:gap-4 p-4 bg-bg-card/80 backdrop-blur-md rounded-2xl border border-white/10 hover:border-brand-gold/50 transition-colors h-full text-white/80">
           <Building className="text-brand-gold shrink-0" size={20} />
-          <div className="text-xs xl:text-sm"><strong className="text-white font-semibold">12</strong> Factories</div>
+          <div className="text-xs xl:text-sm"><strong className="text-white font-semibold font-display">12</strong> Factories</div>
         </div>
         <div className="flex items-center gap-3 lg:gap-4 p-4 bg-bg-card/80 backdrop-blur-md rounded-2xl border border-white/10 hover:border-brand-gold/50 transition-colors h-full text-white/80">
           <Users className="text-brand-gold shrink-0" size={20} />
@@ -206,7 +206,7 @@ const Problem = () => (
               {prob.icon}
             </div>
             <h3 className="text-lg lg:text-xl font-bold text-white mb-2 font-sans tracking-tight">{prob.title}</h3>
-            <p className="text-sm lg:text-base font-light text-text-body leading-relaxed italic">
+            <p className="text-sm lg:text-base font-light text-text-body leading-relaxed">
               {prob.body}
             </p>
           </article>
@@ -263,7 +263,7 @@ const Opportunity = () => (
             <h3 className="text-gradient-gold text-base lg:text-lg font-sans font-medium uppercase tracking-[0.1em] mb-4">
               {s.h}
             </h3>
-            <div className="flex items-start gap-4 mt-auto">
+            <div className="flex items-start gap-4">
               <div className="w-6 h-6 flex items-center justify-center shrink-0 mt-0.5 icon-silver-gradient">
                 <Check className="text-[#111]" size={14} strokeWidth={3} />
               </div>
@@ -313,7 +313,7 @@ const Vietnam = () => (
           <article className="bg-bg-card rounded-3xl p-6 lg:p-8 flex flex-col shadow-lg" key={i}>
             <div className="text-[40px] font-display text-gradient-gold mb-2 leading-none font-medium">{v.n}</div>
             <h3 className="text-gradient-gold text-base lg:text-lg font-sans font-medium uppercase tracking-[0.1em] mb-4">{v.t}</h3>
-            <div className="flex items-start gap-4 mt-auto">
+            <div className="flex items-start gap-4">
               <div className="w-6 h-6 flex items-center justify-center shrink-0 mt-0.5 icon-silver-gradient">
                 <Check className="text-[#111]" size={14} strokeWidth={3} />
               </div>
@@ -417,7 +417,7 @@ const TripSection = () => (
         </div>
       </div>
 
-      <div className="mt-16 md:mt-24 pt-12 md:pt-16 border-t border-border-subtle max-w-3xl mx-auto text-center flex flex-col justify-center items-center">
+      <div className="mt-8 pt-8 border-t border-border-subtle max-w-3xl mx-auto text-center flex flex-col justify-center items-center">
         <span className="text-[11px] lg:text-xs uppercase tracking-[0.2em] font-semibold text-brand-gold mb-4 inline-block px-4 py-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/5">Optional Add-On</span>
         <p className="text-text-body text-base lg:text-lg leading-relaxed">
           Extend <strong className="text-text-heading font-medium">1–2 days of sightseeing</strong> and hang out with the <strong className="text-text-heading font-medium">Greater Austin Asian Chamber of Commerce</strong> on <strong className="text-text-heading font-medium">Jun 6–7</strong> in Hanoi and Ha Long Bay.
@@ -593,17 +593,17 @@ const Hosts = () => (
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
         {[
-          { 
-            name: "Minh Mac", 
-            role: "Founder · 100B", 
-            email: "global@100b.co", 
-            img: "https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&q=80&w=400&h=400" 
+          {
+            name: "Minh Mac",
+            role: "Founder · 100B",
+            email: "global@100b.co",
+            img: "/logos/Minh%20Mac%20CEO.jpeg"
           },
-          { 
-            name: "Lezlie Tram", 
-            role: "CEO · LT Commercial Group", 
-            email: "lezlie@ltcommercialgroup.com", 
-            img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400&h=400" 
+          {
+            name: "Lezlie Tram",
+            role: "CEO · LT Commercial Group",
+            email: "lezlie@ltcommercialgroup.com",
+            img: "/logos/Lezlie.jpg"
           }
         ].map((h, i) => (
           <article className="bg-bg-card rounded-3xl p-16 flex flex-col items-center text-center group hover:bg-bg-card-hover transition-colors" key={i}>
