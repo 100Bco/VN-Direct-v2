@@ -168,7 +168,7 @@ const Hero = () => (
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr_1fr_2.5fr] gap-3 md:gap-4 text-left items-stretch">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[0.8fr_1.4fr_1.4fr_1fr_1.4fr] gap-3 md:gap-4 text-left items-stretch">
         <div className="flex items-center gap-3 lg:gap-4 p-4 bg-bg-card/80 backdrop-blur-md rounded-2xl border border-white/10 hover:border-brand-gold/50 transition-colors h-full text-white/80">
           <Calendar className="text-brand-gold shrink-0" size={20} />
           <div className="text-xs xl:text-sm"><strong className="text-white font-semibold">7 Days</strong></div>
