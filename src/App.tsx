@@ -42,13 +42,7 @@ const Navigation = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-bg-dark/95 backdrop-blur-md border-b border-border-subtle py-4' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
-          <div className="flex items-center gap-3">
-            <img src="/logos/100B%20-%20TACH%20NEN%20-1.png" alt="100B" className="h-8 md:h-9 w-auto object-contain" />
-            <span className={`text-brand-gold text-sm opacity-60 transition-colors ${isScrolled ? 'text-brand-gold' : 'text-white/60'}`}>×</span>
-            <img src="/logos/LOGO%20LT%20COMMERCIAL.png" alt="LT Commercial Group" className="h-8 md:h-9 w-auto object-contain" />
-          </div>
-          <div className={`hidden md:block w-px h-6 mx-2 transition-colors ${isScrolled ? 'bg-border-subtle' : 'bg-white/30'}`}></div>
-          <div className="hidden md:flex flex-col">
+          <div className="flex flex-col">
             <span className="text-sm font-serif text-brand-gold">Vietnam Direct 2026</span>
             <span className={`text-[10px] uppercase tracking-widest font-medium transition-colors ${isScrolled ? 'text-text-body' : 'text-white/70'}`}>Build Better Series</span>
           </div>
@@ -154,10 +148,10 @@ const Hero = () => (
           <p className="text-xs md:text-sm font-medium tracking-[0.15em] uppercase text-brand-gold">May 30 – June 6, 2026</p>
         </div>
         
-        <h1 className="text-6xl md:text-8xl lg:text-[120px] font-serif leading-[0.85] tracking-tight text-white mb-6">
+        <h1 className="text-6xl md:text-8xl lg:text-[120px] font-display leading-[0.85] tracking-tight text-white mb-6">
           VIETNAM<br />
           <span className="text-gradient-gold">DIRECT</span><br />
-          <em className="font-serif italic font-light opacity-[0.15] block mt-2 text-6xl md:text-8xl lg:text-[120px] leading-[0.7]">2026</em>
+          <em className="font-display italic font-light opacity-[0.15] block mt-2 text-6xl md:text-8xl lg:text-[120px] leading-[0.7]">2026</em>
         </h1>
         
         <p className="text-lg md:text-xl lg:text-2xl font-light text-white mb-8 leading-snug max-w-2xl">
@@ -246,7 +240,7 @@ const Opportunity = () => (
           { n: "3–4×", l: "Domestic markup\nbeing paid" },
         ].map((stat, i) => (
           <div key={i} className="bg-bg-card rounded-3xl p-8 flex flex-col justify-center text-center items-center shadow-lg">
-            <span className="text-[48px] md:text-[64px] font-serif text-gradient-gold mb-2 lining-nums tracking-tight font-light leading-none">{stat.n}</span>
+            <span className="text-[48px] md:text-[64px] font-display text-gradient-gold mb-2 lining-nums tracking-tight font-light leading-none">{stat.n}</span>
             <span className="text-sm lg:text-base text-text-body font-light leading-relaxed whitespace-pre-line">{stat.l}</span>
           </div>
         ))}
@@ -267,7 +261,7 @@ const Opportunity = () => (
           { h: "Access to Capital", b: "Connect US projects with Vietnamese HNWIs seeking US exposure." },
         ].map((s, idx) => (
           <article className="bg-bg-card rounded-3xl p-6 lg:p-8 flex flex-col shadow-lg" key={idx}>
-            <div className="text-[40px] font-serif text-gradient-gold mb-2 leading-none font-medium">0{idx + 1}</div>
+            <div className="text-[40px] font-display text-gradient-gold mb-2 leading-none font-medium">0{idx + 1}</div>
             <h3 className="text-gradient-gold text-base lg:text-lg font-sans font-medium uppercase tracking-[0.1em] mb-4">
               {s.h}
             </h3>
@@ -302,7 +296,7 @@ const Vietnam = () => (
         ].map((stat, i) => (
           <div key={i} className="bg-bg-card hover:bg-bg-card-hover transition-colors rounded-3xl p-6 lg:p-8 flex flex-col items-center text-center shadow-lg">
             <div className="w-16 h-16 rounded-full bg-gradient-to-b from-[#4A4A4A] to-[#1A1A1A] flex items-center justify-center mb-6 shadow-inner border border-white/5">
-              <span className="text-xl font-serif text-white font-bold">{stat.n}</span>
+              <span className="text-xl font-display text-white font-bold">{stat.n}</span>
             </div>
             <h3 className="text-sm lg:text-base font-bold text-white mb-2 font-sans tracking-tight leading-snug">{stat.l}</h3>
           </div>
@@ -319,7 +313,7 @@ const Vietnam = () => (
           { n: "06", t: "Early Movers Win", b: "Best factories are selective. Early relationships get better pricing & capacity." },
         ].map((v, i) => (
           <article className="bg-bg-card rounded-3xl p-6 lg:p-8 flex flex-col shadow-lg" key={i}>
-            <div className="text-[40px] font-serif text-gradient-gold mb-2 leading-none font-medium">{v.n}</div>
+            <div className="text-[40px] font-display text-gradient-gold mb-2 leading-none font-medium">{v.n}</div>
             <h3 className="text-gradient-gold text-base lg:text-lg font-sans font-medium uppercase tracking-[0.1em] mb-4">{v.t}</h3>
             <div className="flex items-start gap-4 mt-auto">
               <div className="w-6 h-6 flex items-center justify-center shrink-0 mt-0.5 icon-silver-gradient">
@@ -522,7 +516,7 @@ const Factories = () => {
                   onClick={() => toggleOpen(f.id)}
                 >
                   <div className="grid grid-cols-[60px_1fr] lg:grid-cols-[80px_2.5fr_3fr_1fr_100px] gap-4 p-8 lg:p-10 items-center">
-                    <div className="text-sm lg:text-base uppercase font-serif font-bold tracking-widest text-[#a3a3a3] group-hover:text-brand-gold transition-colors">{f.id}</div>
+                    <div className="text-sm lg:text-base uppercase font-display font-bold tracking-widest text-[#a3a3a3] group-hover:text-brand-gold transition-colors">{f.id}</div>
                     
                     <div>
                       <h4 className="text-xl lg:text-2xl font-bold text-text-heading mb-2 group-hover:text-brand-gold transition-colors">{f.name}</h4>
