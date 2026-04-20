@@ -428,7 +428,7 @@ const TripSection = () => (
       </div>
 
       <div className="mt-8 pt-8 border-t border-border-subtle max-w-3xl mx-auto text-center flex flex-col justify-center items-center">
-        <span className="text-[11px] lg:text-xs uppercase tracking-[0.2em] font-semibold text-brand-gold mb-4 inline-block px-4 py-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/5">Optional Add-On <span className="font-display">$700</span></span>
+        <span className="text-[11px] lg:text-xs uppercase tracking-[0.2em] font-semibold text-brand-gold mb-4 inline-block px-4 py-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/5">Optional Add-On $700</span>
         <p className="text-text-body text-base lg:text-lg leading-relaxed">
           Extend <strong className="text-text-heading font-medium">2 days of sightseeing</strong> and hang out with the <strong className="text-text-heading font-medium">Greater Austin Asian Chamber of Commerce</strong> on <strong className="text-text-heading font-medium">Jun 6–7</strong> in Hanoi and Ha Long Bay on a yacht.
         </p>
