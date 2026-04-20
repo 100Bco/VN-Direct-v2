@@ -43,6 +43,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <img src="/logos/100B%20-%20TACH%20NEN%20-1.png" alt="100B" className="h-8 md:h-9 w-auto object-contain" />
+          <span className="text-brand-gold text-xs opacity-60">×</span>
           <img src="/logos/LOGO%20LT%20COMMERCIAL.png" alt="LT Commercial Group" className="h-8 md:h-9 w-auto object-contain" />
         </div>
 
@@ -140,9 +141,6 @@ const Hero = () => (
     <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
       <div className="max-w-4xl relative z-10 w-full mt-10 md:mt-0">
         <div className="flex flex-wrap items-center justify-start gap-3 mb-6">
-          <span className="text-[11px] uppercase tracking-[0.2em] px-3 py-1 border border-white/20 text-white font-medium rounded-full">
-            100B <span className="mx-1 opacity-60">×</span> LT Commercial Group
-          </span>
           <span className="text-[11px] uppercase tracking-[0.2em] px-3 py-1 border border-white/20 text-white font-medium rounded-full">
             Build Better Series
           </span>
