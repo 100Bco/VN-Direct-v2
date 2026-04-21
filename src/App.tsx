@@ -415,8 +415,8 @@ const TripSection = () => (
                   </div>
                   
                   {/* Right Column: Location and Events */}
-                  <div className="flex-1 pb-4 pt-1 md:py-[22px] pl-6 md:pl-7 pr-4 lg:pr-6 flex flex-col xl:flex-row xl:items-center justify-between gap-3 xl:gap-8 w-full">
-                    <div className="text-text-heading font-medium text-[15px] lg:text-[17px] leading-snug xl:w-auto shrink-0">{r.loc}</div>
+                  <div className="flex-1 min-w-0 pb-4 pt-1 md:py-[22px] pl-6 md:pl-7 pr-4 lg:pr-6 flex flex-col gap-3 w-full">
+                    <div className="text-text-heading font-medium text-[15px] lg:text-[17px] leading-snug">{r.loc}</div>
                     <div className="flex flex-wrap gap-2 md:justify-end">
                       {r.chips.map(([label, gold], j) => (
                         <span className={`text-[11px] lg:text-[12px] px-3 py-1.5 border transition-colors whitespace-nowrap rounded ${gold ? "border-brand-gold/30 text-brand-gold bg-brand-gold/5 group-hover:bg-brand-gold/10 group-hover:border-brand-gold/40" : "border-white/10 text-white/50 bg-white/5 group-hover:bg-white/10 group-hover:text-white/70"}`} key={j}>
