@@ -169,11 +169,11 @@ const Hero = () => (
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 md:gap-4 text-left items-stretch">
         <div className="flex items-center gap-3 lg:gap-4 p-4 bg-bg-card/80 backdrop-blur-md rounded-2xl border border-white/10 hover:border-brand-gold/50 transition-colors h-full text-white/80">
           <Calendar className="text-brand-gold shrink-0" size={20} />
-          <div className="text-xs xl:text-sm"><strong className="text-white font-semibold">7 Days</strong></div>
+          <div className="text-xs xl:text-sm"><strong className="text-white font-semibold">7 days</strong> factory visits. <span className="opacity-80">Optional 2 days excursion</span></div>
         </div>
         <div className="flex items-center gap-3 lg:gap-4 p-4 bg-bg-card/80 backdrop-blur-md rounded-2xl border border-white/10 hover:border-brand-gold/50 transition-colors h-full text-white/80">
           <Building className="text-brand-gold shrink-0" size={20} />
-          <div className="text-xs xl:text-sm"><strong className="text-white font-semibold">10-12</strong> Hand-Picked Factories</div>
+          <div className="text-xs xl:text-sm"><strong className="text-white font-semibold">10-13</strong> Hand-Picked Factories</div>
         </div>
         <div className="flex items-center gap-3 lg:gap-4 p-4 bg-bg-card/80 backdrop-blur-md rounded-2xl border border-white/10 hover:border-brand-gold/50 transition-colors h-full text-white/80">
           <Users className="text-brand-gold shrink-0" size={20} />
@@ -313,9 +313,9 @@ const Vietnam = () => (
         {[
           { n: "01", t: "US–China Trade War", b: "Tariffs of 25–145% permanently shifted supply chains. Vietnam is the #1 beneficiary." },
           { n: "02", t: "Mature Export Routes", b: "Vietnam exported $405B in goods in 2024. Port infra & freight to the US are established." },
-          { n: "03", t: "World-Class Quality", b: "Factories on this trip hold ASTM, LEED, ISO, FSC certifications. Suppliers for CA's tallest building & US Marriotts." },
-          { n: "04", t: "Strategic Partner", b: "Comprehensive Strategic Partnership with US established 2023 – highest diplomatic tier. Government-backed stability for long-term bilateral relationships." },
-          { n: "05", t: "Durable Advantage", b: "60–70% lower labor and land costs create a structural price advantage." },
+          { n: "03", t: "Durable Advantage", b: "60–70% lower labor and land costs create a structural price advantage." },
+          { n: "04", t: "Strategic Partner", b: "Comprehensive Strategic Partnership with US established 2023 – highest diplomatic tier. Government-backed stability." },
+          { n: "05", t: "World-Class Quality", b: "Factories on this trip hold ASTM, LEED, ISO, FSC certifications. Suppliers for CA's tallest building & US Marriotts." },
           { n: "06", t: "Early Movers Win", b: "Best factories are selective. Early relationships get better pricing & capacity." },
         ].map((v, i) => (
           <article className="bg-bg-card rounded-3xl p-6 lg:p-8 flex flex-col shadow-lg" key={i}>
@@ -339,7 +339,7 @@ const TripSection = () => (
     <div className="max-w-7xl mx-auto px-6">
       <SectionHeader
         subtitle="The Experience"
-        title="7 days. 10-12 factories. Zero fluff."
+        title="7 days. 10-13 factories. Zero fluff."
         titleAccent="Zero fluff."
       />
 
@@ -369,8 +369,15 @@ const TripSection = () => (
             <div className="absolute top-0 left-0 w-1.5 h-full bg-brand-gold"></div>
             <span className="text-[11px] lg:text-xs uppercase tracking-[0.2em] font-semibold text-brand-gold mb-3 block">Cost</span>
             <div className="text-text-body text-base lg:text-lg leading-relaxed">
-              <strong className="text-text-heading text-lg lg:text-xl block mb-2">$3,550 per person.</strong>
-              Includes domestic flights, ground transportation, meals, hotels (7 nights) and miscellaneous expenses. International flights are not included.
+              <strong className="text-text-heading text-lg lg:text-xl block mb-4">$3,550 per person.</strong>
+              <div className="flex gap-3 items-start mb-3">
+                <Check className="text-text-muted mt-1 shrink-0" size={18} strokeWidth={2.5} />
+                <span>Includes domestic flights, ground transportation, meals, hotels (7 nights) and miscellaneous expenses.</span>
+              </div>
+              <div className="flex gap-3 items-start">
+                <X className="text-brand-gold mt-1 shrink-0" size={18} strokeWidth={2.5} />
+                <span className="text-text-heading font-medium">International flights are not included.</span>
+              </div>
             </div>
           </div>
 
@@ -688,7 +695,7 @@ const Footer = () => (
       </div>
       <div className="text-center md:text-right text-xs text-text-body leading-relaxed opacity-60">
         Made in Vietnam. Consumed Worldwide.<br />
-        Powered by 100Bold
+        Powered by <a href="https://100bold.co" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors underline decoration-dotted underline-offset-2">100Bold</a>
       </div>
     </div>
   </footer>
