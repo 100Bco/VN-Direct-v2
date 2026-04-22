@@ -693,7 +693,7 @@ const Factories = () => {
                 {sampleVideos.map(v => (
                   <div
                     key={v.id}
-                    className="flex flex-col gap-3 snap-start shrink-0 w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/3)]"
+                    className="flex flex-col gap-3 snap-start shrink-0 w-full md:w-[calc((100%-48px)/3)]"
                   >
                     <div className="relative w-full overflow-hidden rounded-2xl border border-border-subtle bg-bg-dark" style={{ aspectRatio: '4 / 5' }}>
                       <iframe
