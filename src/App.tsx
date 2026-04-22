@@ -125,15 +125,28 @@ const Hero = () => (
   <header className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden bg-black">
     {/* Full Screen Background Video */}
     <div className="absolute inset-0 z-0 overflow-hidden">
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover opacity-[0.35] mix-blend-luminosity"
+      <div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.35] mix-blend-luminosity pointer-events-none"
+        style={{ width: 'max(177.77vh, 100vw)', height: 'max(56.25vw, 100vh)' }}
       >
-        <source src="https://assets.mixkit.co/videos/preview/mixkit-welder-working-on-a-large-piece-of-metal-43034-large.mp4" type="video/mp4" />
-      </video>
+        {React.createElement('wistia-player', {
+          'media-id': '9hbymhvynw',
+          'aspect': '1.7777777777777777',
+          'autoplay': 'true',
+          'muted': 'true',
+          'silent-auto-play': 'true',
+          'playsinline': 'true',
+          'endvideobehavior': 'loop',
+          'end-video-behavior': 'loop',
+          'controls-visible-on-load': 'false',
+          'playbar': 'false',
+          'settings-control': 'false',
+          'fullscreen-button': 'false',
+          'small-play-button': 'false',
+          'play-button': 'false',
+          style: { width: '100%', height: '100%', display: 'block' },
+        })}
+      </div>
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent mix-blend-multiply" />
       <div className="absolute inset-0 bg-black/50" /> {/* Dark wash to guarantee text contrast */}
     </div>
@@ -415,8 +428,8 @@ const TripSection = () => (
                   </div>
                   
                   {/* Right Column: Location and Events */}
-                  <div className="flex-1 pb-4 pt-1 md:py-[22px] pl-6 md:pl-7 pr-4 lg:pr-6 flex flex-col xl:flex-row xl:items-center justify-between gap-3 xl:gap-8 w-full">
-                    <div className="text-text-heading font-medium text-[15px] lg:text-[17px] leading-snug xl:w-auto shrink-0">{r.loc}</div>
+                  <div className="flex-1 min-w-0 pb-4 pt-1 md:py-[22px] pl-6 md:pl-7 pr-4 lg:pr-6 flex flex-col gap-3 w-full">
+                    <div className="text-text-heading font-medium text-[15px] lg:text-[17px] leading-snug">{r.loc}</div>
                     <div className="flex flex-wrap gap-2 md:justify-end">
                       {r.chips.map(([label, gold], j) => (
                         <span className={`text-[11px] lg:text-[12px] px-3 py-1.5 border transition-colors whitespace-nowrap rounded ${gold ? "border-brand-gold/30 text-brand-gold bg-brand-gold/5 group-hover:bg-brand-gold/10 group-hover:border-brand-gold/40" : "border-white/10 text-white/50 bg-white/5 group-hover:bg-white/10 group-hover:text-white/70"}`} key={j}>
