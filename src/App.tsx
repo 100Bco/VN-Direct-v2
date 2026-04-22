@@ -137,6 +137,7 @@ const Hero = () => (
           'silent-auto-play': 'true',
           'playsinline': 'true',
           'endvideobehavior': 'loop',
+          'end-video-behavior': 'loop',
           'controls-visible-on-load': 'false',
           'playbar': 'false',
           'settings-control': 'false',
