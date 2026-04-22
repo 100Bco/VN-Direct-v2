@@ -157,11 +157,11 @@ const Hero = () => {
 
     <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
       <div className="max-w-4xl relative z-10 w-full mt-10 md:mt-0">
-        <div className="flex flex-wrap items-center justify-start gap-3 mb-6">
-          <span className="text-[11px] uppercase tracking-[0.2em] px-3 py-1 border border-white/20 text-white font-medium rounded-full">
+        <div className="flex flex-nowrap md:flex-wrap items-center justify-start gap-2 md:gap-3 mb-6">
+          <span className="text-[10px] md:text-[11px] uppercase tracking-[0.15em] md:tracking-[0.2em] px-2.5 md:px-3 py-1 border border-white/20 text-white font-medium rounded-full whitespace-nowrap">
             Build Better Series
           </span>
-          <span className="text-[11px] uppercase tracking-[0.2em] px-3 py-1 border border-brand-gold text-brand-gold font-medium rounded-full">
+          <span className="text-[10px] md:text-[11px] uppercase tracking-[0.15em] md:tracking-[0.2em] px-2.5 md:px-3 py-1 border border-brand-gold text-brand-gold font-medium rounded-full whitespace-nowrap">
             By Invitation Only
           </span>
         </div>
@@ -186,7 +186,7 @@ const Hero = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 md:gap-4 text-left items-stretch">
         <div className="flex items-center gap-3 lg:gap-4 p-4 bg-bg-card/80 backdrop-blur-md rounded-2xl border border-white/10 hover:border-brand-gold/50 transition-colors h-full text-white/80">
           <Calendar className="text-brand-gold shrink-0" size={20} />
-          <div className="text-xs xl:text-sm"><strong className="text-white font-semibold">7 days</strong><br />+ 2 days excursion</div>
+          <div className="text-xs xl:text-sm"><strong className="text-white font-semibold">7 days</strong> <span className="md:hidden">· </span><span className="hidden md:inline"><br /></span>+ 2 days excursion</div>
         </div>
         <div className="flex items-center gap-3 lg:gap-4 p-4 bg-bg-card/80 backdrop-blur-md rounded-2xl border border-white/10 hover:border-brand-gold/50 transition-colors h-full text-white/80">
           <Building className="text-brand-gold shrink-0" size={20} />
