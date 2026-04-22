@@ -129,17 +129,9 @@ const Hero = () => {
   return (
     <header className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden bg-black">
       {/* Full Screen Background Video */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
-        {/* Fallback thumbnail — always rendered so it shows if the video fails or is slow */}
-        <img
-          src="/logos/0421%282%29.png"
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-        />
+      <div className="absolute inset-0 z-0 overflow-hidden bg-black">
         <div
-          className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none transition-opacity duration-700 ${videoReady ? 'opacity-100' : 'opacity-0'}`}
-          style={{ width: 'max(177.77vh, 100vw)', height: 'max(56.25vw, 100vh)' }}
+          className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none transition-opacity duration-700 w-screen h-[56.25vw] md:w-[max(177.77vh,100vw)] md:h-[max(56.25vw,100vh)] ${videoReady ? 'opacity-100' : 'opacity-0'}`}
         >
           <iframe
             src="https://fast.wistia.net/embed/iframe/9hbymhvynw?autoPlay=true&muted=true&silentAutoPlay=allow&playsinline=true&playsInline=true&endVideoBehavior=loop&videoFoam=true&controlsVisibleOnLoad=false&playButton=false&smallPlayButton=false&playbar=false&fullscreenButton=false&settingsControl=false&volumeControl=false&playbackRateControl=false&captions=false&wmode=transparent"
