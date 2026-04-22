@@ -132,7 +132,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0 overflow-hidden bg-black">
         <div
           className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none transition-opacity duration-700 ${videoReady ? 'opacity-100' : 'opacity-0'}`}
-          style={{ width: 'max(177.77vh, 100vw)', height: 'max(56.25vw, 100vh)' }}
+          style={{ width: 'max(356vh, 100vw)', height: 'max(200vh, 56.25vw)' }}
         >
           <iframe
             src="https://fast.wistia.net/embed/iframe/9hbymhvynw?autoPlay=true&muted=true&silentAutoPlay=allow&playsinline=true&playsInline=true&endVideoBehavior=loop&videoFoam=true&controlsVisibleOnLoad=false&playButton=false&smallPlayButton=false&playbar=false&fullscreenButton=false&settingsControl=false&volumeControl=false&playbackRateControl=false&captions=false&wmode=transparent"
