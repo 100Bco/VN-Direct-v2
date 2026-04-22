@@ -461,10 +461,19 @@ const TripSection = () => (
 
 const Factories = () => {
   const [openId, setOpenId] = useState<string | null>("01");
+  const [samplesOpen, setSamplesOpen] = useState(true);
 
   const toggleOpen = (id: string) => {
     setOpenId(openId === id ? null : id);
   };
+
+  const sampleVideos = [
+    { name: "Eurowindow", id: "7407382456791756801" },
+    { name: "Tien Phong Plastic", id: "7388923049066192896" },
+    { name: "Woodsland", id: "7350501850061713409" },
+    { name: "Vina G7", id: "7348646710086201345" },
+    { name: "Phu Tai", id: "7347942924719935488" },
+  ];
 
   const factories = [
     { id: "01", name: "An Cuong Wood", loc: "Binh Duong", type: "Interior Panels · SPC Flooring · Wall Panels · Doors", rating: 5, hub: "SOUTH — HO CHI MINH CITY · MAY 31 – JUN 2", estRev: "~$145M", size: "240,000 m²", mkt: "50%+ Vietnam", inv: "Sumitomo · DEG · VinaCapital", us: "Rep office · exports live", details: [
@@ -535,6 +544,40 @@ const Factories = () => {
             {renderStars(3)}
             <span className="text-text-heading font-medium">Selective</span>
           </div>
+        </div>
+
+        <div className="mb-10 rounded-3xl border border-border-subtle bg-bg-card overflow-hidden shadow-lg">
+          <button
+            type="button"
+            onClick={() => setSamplesOpen(v => !v)}
+            className="w-full flex items-center justify-between gap-4 p-6 lg:p-8 text-left hover:bg-bg-card-hover transition-colors"
+          >
+            <div className="flex items-center gap-4">
+              <span className="text-[11px] lg:text-xs uppercase tracking-[0.2em] font-semibold text-brand-gold">Sample Videos</span>
+              <span className="hidden md:inline text-text-body text-sm">5 factory highlights from the 100B ecosystem</span>
+            </div>
+            <span className={`w-8 h-8 rounded-full border flex items-center justify-center transition-all shrink-0 ${samplesOpen ? 'border-brand-gold rotate-180 bg-brand-gold/10 text-brand-gold' : 'border-border-subtle text-text-body'}`}>
+              <ChevronDown size={14} />
+            </span>
+          </button>
+          {samplesOpen && (
+            <div className="border-t border-border-subtle p-6 lg:p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {sampleVideos.map(v => (
+                <div key={v.id} className="flex flex-col gap-3">
+                  <div className="relative w-full overflow-hidden rounded-2xl border border-border-subtle bg-bg-dark" style={{ aspectRatio: '9 / 13' }}>
+                    <iframe
+                      src={`https://www.linkedin.com/embed/feed/update/urn:li:activity:${v.id}`}
+                      className="absolute inset-0 w-full h-full"
+                      frameBorder={0}
+                      allowFullScreen
+                      title={`${v.name} sample video`}
+                    />
+                  </div>
+                  <div className="text-sm font-medium text-text-heading">{v.name}</div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
 
         <div className="flex flex-col gap-4">
