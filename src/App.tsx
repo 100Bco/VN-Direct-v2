@@ -659,7 +659,7 @@ const Factories = () => {
           >
             <div className="flex items-center gap-4">
               <span className="text-[11px] lg:text-xs uppercase tracking-[0.2em] font-semibold text-brand-gold">Sample Videos</span>
-              <span className="hidden md:inline text-text-body text-sm">5 factory highlights from the 100B ecosystem</span>
+              <span className="hidden md:inline text-text-body text-sm">6 videos from the 100B ecosystem</span>
             </div>
             <span className={`w-8 h-8 rounded-full border flex items-center justify-center transition-all shrink-0 ${samplesOpen ? 'border-brand-gold rotate-180 bg-brand-gold/10 text-brand-gold' : 'border-border-subtle text-text-body'}`}>
               <ChevronDown size={14} />
@@ -695,7 +695,7 @@ const Factories = () => {
                     key={v.id}
                     className="flex flex-col gap-3 snap-start shrink-0 w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/3)]"
                   >
-                    <div className="relative w-full overflow-hidden rounded-2xl border border-border-subtle bg-bg-dark" style={{ aspectRatio: '9 / 16' }}>
+                    <div className="relative w-full overflow-hidden rounded-2xl border border-border-subtle bg-bg-dark" style={{ aspectRatio: '4 / 5' }}>
                       <iframe
                         src={`https://www.linkedin.com/embed/feed/update/urn:li:activity:${v.id}`}
                         className="absolute inset-0 w-full h-full"
@@ -703,8 +703,20 @@ const Factories = () => {
                         allowFullScreen
                         title={`${v.name} sample video`}
                       />
+                      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-bg-card via-bg-card/80 to-transparent" />
                     </div>
-                    <div className="text-sm font-medium text-text-heading">{v.name}</div>
+                    <div className="flex items-center justify-between gap-2">
+                      <div className="text-sm font-medium text-text-heading">{v.name}</div>
+                      <a
+                        href={`https://www.linkedin.com/feed/update/urn:li:activity:${v.id}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-[11px] uppercase tracking-[0.15em] font-semibold text-brand-gold hover:text-brand-gold-hover transition-colors"
+                      >
+                        Watch on LinkedIn
+                        <ArrowRight size={12} />
+                      </a>
+                    </div>
                   </div>
                 ))}
               </div>
