@@ -475,20 +475,120 @@ const Factories = () => {
   ];
 
   const factories = [
-    { id: "01", name: "An Cuong Wood", loc: "Binh Duong", type: "Interior Panels · SPC Flooring · Wall Panels · Doors", rating: 5, hub: "SOUTH — HO CHI MINH CITY · MAY 31 – JUN 2", estRev: "~$145M", size: "240,000 m²", mkt: "50%+ Vietnam", inv: "Sumitomo · DEG · VinaCapital", us: "Rep office · exports live", details: [
+    { id: "01", name: "An Cuong Wood", loc: "Binh Duong", type: "Interior Panels · SPC Flooring · Wall Panels · Doors", rating: 5, hub: "SOUTH — HO CHI MINH CITY · MAY 31 – JUN 2", stats: [
+      ["EST. REVENUE", "~$145M"],
+      ["FACTORY", "240,000 m²"],
+      ["MKT SHARE", "50%+ Vietnam"],
+      ["INVESTORS", "Sumitomo · DEG · VinaCapital"],
+      ["US PRESENCE", "Rep office · exports live"],
+    ], details: [
       "Vietnam's #1 interior materials company. Publicly listed, 50%+ domestic market share.",
       "Full ecosystem: panels, SPC/laminate flooring, wall panels, acoustic panels, doors — genuine one-stop shop.",
-      "Backed by Sumitomo (Japan) + DEG (German dev bank). Already ships to USA, Australia, Japan, Canada."
+      "Backed by Sumitomo (Japan) + DEG (German dev bank). Already ships to USA, Australia, Japan, Canada.",
     ] },
-    { id: "02", name: "BM Windows", loc: "Binh Duong", type: "Aluminum-Glass Facades · Curtain Walls · Unitized Panels", rating: 5, hub: "SOUTH", details: ["Leading facade contractor in Vietnam.", "Strong track record with major international developers.", "State-of-the-art manufacturing facilities."] },
-    { id: "03", name: "Phu Tai + Vina G7", loc: "Binh Duong / Dong Nai", type: "Kitchen Cabinets · Wood Furniture · Quartz Stone", rating: 5, hub: "SOUTH", details: ["Major supplier to US big box retailers.", "Vertically integrated from stone quarrying to finished cabinets.", "Huge capacity and proven export reliability."] },
-    { id: "04", name: "Dai Dung Corporation", loc: "Long An", type: "Prefab Steel Structures · Fabrication · EPC", rating: 5, hub: "SOUTH", details: ["Leading heavy steel fabricator.", "Supplied steel for world cup stadiums and major infrastructure.", "Expertise in complex structural steel exports."] },
-    { id: "05", name: "Tan Thanh Container", loc: "HCMC", type: "ISO Containers · Modified / Prefab Units", rating: 3, hub: "SOUTH", details: ["Vietnam's largest container manufacturer.", "Specializes in modified container housing and modular units.", "Strong potential for cost-effective prefab developments."] },
-    { id: "06", name: "AA Corporation", loc: "HCMC / Long An", type: "Luxury FF&E · Custom Furniture · Interior Fit-Out", rating: 4, hub: "SOUTH", details: ["Premium interior fit-out company.", "Furnished top luxury hotels globally (Marriott, Four Seasons).", "Ideal partner for high-end hospitality and custom millwork."] },
-    
-    { id: "07", name: "Eurowindow", loc: "Hanoi", type: "Aluminum + uPVC Windows/Doors · Curtain Walls · Timber Doors", rating: 4, hub: "NORTH — HANOI HUB · JUN 3 – JUN 6", details: ["Vietnam's pioneer in modern window solutions.", "Massive scale and diverse product lines.", "Strong international quality certifications."] },
-    { id: "08", name: "Tonmat Group", loc: "Bac Ninh", type: "Insulated Roof + Wall Panels · Metal Roofing · Color-Coated Steel", rating: 5, hub: "NORTH", details: ["Leader in insulated sandwich panels (PU, PIR, Rockwool).", "Essential for modern, energy-efficient building envelopes.", "High automated production capacity."] },
-    { id: "09", name: "EuroStark (EuP Group)", loc: "Yen Bai", type: "WPC Decking · Cladding · Fencing · Outdoor Furniture", rating: 4, hub: "NORTH", stats: [
+    { id: "02", name: "BM Windows", loc: "Binh Duong", type: "Aluminum-Glass Facades · Curtain Walls · Unitized Panels", rating: 5, hub: "SOUTH", stats: [
+      ["EST. REVENUE", "~$120M+"],
+      ["CAPACITY", "2M m²/yr"],
+      ["FACTORY", "LEED Silver (US GBC)"],
+      ["PROJECTS", "650+ in 8 countries"],
+    ], details: [
+      "Only aluminum-glass factory in Vietnam with LEED Silver from the US Green Building Council.",
+      "Supplied Canada's tallest building (The One Toronto, 85F, Foster & Partners) — all ASTM-certified.",
+      "Live US exports: Marriott Courtyard Hawaii. Currently executing 55 Pitt Street Sydney (6-star Green Star target).",
+      "Asian Export Award 2024 — only Vietnamese facade exporter in Construction Materials category.",
+    ] },
+    { id: "03", name: "Phu Tai + Vina G7", loc: "Binh Duong / Dong Nai", type: "Kitchen Cabinets · Wood Furniture · Quartz Stone", rating: 5, hub: "SOUTH", stats: [
+      ["EST. REVENUE", "$100M+"],
+      ["LISTING", "HOSE (public)"],
+      ["FACTORIES", "4 total"],
+      ["EXPORT", "USA · Japan (primary)"],
+    ], details: [
+      "2 wood factories (Phu Tai + Vina G7 brands, kitchen cabinets + furniture) + 2 quartz factories — one group.",
+      "Among Vietnam's largest publicly listed furniture exporters. Automated lines, strong OEM/ODM.",
+      "Kitchen cabinets at scale for US residential — ideal for high-volume builders sourcing cabinet packages.",
+    ] },
+    { id: "04", name: "Dai Dung Corporation", loc: "Long An (~40 min)", type: "Prefab Steel Structures · Fabrication · EPC", rating: 5, hub: "SOUTH", stats: [
+      ["EST. REVENUE", "~$80–100M"],
+      ["EXPERIENCE", "~30 years"],
+      ["FACTORY", "LEED Gold v4"],
+    ], details: [
+      "Full structural engineering firm: design, fabrication, erection, EPC. Not a commodity steel shop.",
+      "LEED Gold v4 factory — among Vietnam's highest green manufacturing credentials.",
+      "Portfolio: stadiums, airports, skyscrapers, offshore modules. Impressive for GC and developer audiences.",
+    ] },
+    { id: "05", name: "Tan Thanh Container", loc: "HCMC", type: "ISO Containers · Modified / Prefab Units", rating: 3, hub: "SOUTH", stats: [
+      ["EST. REVENUE", "~$40–60M"],
+      ["POSITION", "Vietnam's #1 container brand"],
+    ], details: [
+      "Vietnam's leading container manufacturer — ISO, modified, cold storage, and prefab units.",
+      "Growing US interest in modular/container construction. This visit validates real-world economics.",
+      "US export economics contingent on logistics cost and tariff environment — visit is exploratory.",
+    ] },
+    { id: "06", name: "AA Corporation", loc: "HCMC / Long An", type: "Luxury FF&E · Custom Furniture · Interior Fit-Out", rating: 4, hub: "SOUTH", stats: [
+      ["EST. REVENUE", "~$100–120M"],
+      ["FOUNDED", "1989"],
+      ["EXPORT", "40+ countries"],
+      ["US SUBSIDIARY", "ACA Interiors, Portland OR"],
+    ], details: [
+      "35+ years. Vietnam's largest luxury interior fit-out manufacturer. First 5-star hotel in Vietnam (Sofitel Da Lat Palace, 1995).",
+      "Exports to 40+ countries. Live US subsidiary in Portland, OR. Park Hyatt, Marriott, Ritz-Carlton portfolio.",
+      "Best for hospitality developers and luxury residential — premium custom FF&E, not volume production.",
+    ] },
+
+    { id: "07", name: "Eurowindow", loc: "Hanoi", type: "Aluminum + uPVC Windows/Doors · Curtain Walls · Timber Doors", rating: 4, hub: "NORTH — HANOI HUB · JUN 3 – JUN 6", stats: [
+      ["EST. REVENUE", "~$200M"],
+      ["FACTORY", "~500,000 m²"],
+      ["EXPORT", "30+ countries"],
+    ], details: [
+      "Vietnam's #1 fenestration brand — supplies airports, luxury hotels, and major towers nationally.",
+      "Widest product range: aluminum + uPVC windows/doors, curtain walls, timber doors, insulating glass, auto doors — entire building envelope from one factory.",
+      "500K m² facility, 30+ export countries. Single-source for every door and window on a project.",
+    ] },
+    { id: "08", name: "Tonmat Group", loc: "Bac Ninh (~30 min)", type: "Insulated Roof + Wall Panels · Metal Roofing · Color-Coated Steel", rating: 5, hub: "NORTH", stats: [
+      ["EST. REVENUE", "~$150M"],
+      ["VIETNAM", "#1 Sandwich Panel"],
+      ["GLOBAL", "Top 20 Worldwide"],
+      ["STEEL JV", "Marubeni Itochu (Japan)"],
+    ], details: [
+      "#1 in Vietnam for insulated roof + wall panels. Top 20 globally. Founded 2003.",
+      "Group: TONMATPAN (sandwich panels) + FUJITON (color-coated steel, JV with Marubeni Itochu Japan).",
+      "Metal roofing with Japanese-quality backing — easy to spec for US project owners.",
+    ] },
+    { id: "09", name: "Amy Grupo", loc: "Vinh Phuc (~45 min)", type: "Tile · SPC/LVT Flooring · WPC Decking · Wall Panels", rating: 5, hub: "NORTH", stats: [
+      ["EST. REVENUE", "~$80–120M"],
+      ["FOUNDED", "2015"],
+      ["EXPORT", "USA · Mexico + others"],
+    ], details: [
+      "Most diverse stop: ceramic tiles, SPC/LVT flooring, WPC decking, wall panels — all under one roof.",
+      "US and Mexico exports confirmed. Runs its own design awards program — not just a commodity factory.",
+    ] },
+    { id: "10", name: "An Phat Holdings", loc: "Hai Phong · AnPro + An Cuong Flooring", type: "SPC/LVT Flooring · PVC Wall Panels · Wall Cladding", rating: 4, hub: "NORTH", stats: [
+      ["PARENT REVENUE", "$500M+ (AAH)"],
+      ["LISTING", "Public"],
+      ["KEY FEATURE", "100% Waterproof · Formaldehyde-Free"],
+    ], details: [
+      "Two brands, one factory: AnPro + An Cuong Flooring — SPC/LVT flooring, PVC wall panels, wall cladding.",
+      "100% waterproof, formaldehyde-free — easy spec for US residential, multifamily, hospitality.",
+      "Note: completely separate from An Cuong Wood (#01). Different parent, different product line entirely.",
+    ] },
+    { id: "11", name: "Tien Phong Plastic", loc: "Hai Phong (w/ #10)", type: "PVC + HDPE Pipes · Pipe Fittings · Plumbing Systems", rating: 2, hub: "NORTH", stats: [
+      ["REVENUE (TTM)", "~$260M"],
+      ["LISTED", "NTP (public)"],
+      ["HISTORY", "50+ years"],
+    ], details: [
+      "Vietnam's #1 PVC/HDPE pipe manufacturer. 1,000+ product types. Combine with Hai Phong visit (#10).",
+      "Best for land developers speccing underground utilities — plumbing, drainage, irrigation supply chain.",
+    ] },
+    { id: "12", name: "Hoa Phat Group", loc: "Hanoi · Meeting Format", type: "Construction Steel · Galvanized + Color-Coated Steel · Metal Roofing", rating: 4, hub: "NORTH", stats: [
+      ["REVENUE 2024", "~$5.6B"],
+      ["VIETNAM", "#1 Steel Producer"],
+      ["EXPORT", "40+ countries incl. USA"],
+    ], details: [
+      "Vietnam's #1 steel producer, Southeast Asia's largest — Top 30 globally. Exports to USA, Canada, Japan.",
+      "Format: commercial briefing (not factory tour) — for volume steel and metal roofing sourcing conversations.",
+    ] },
+
+    { id: "13", name: "EuroStark (EuP Group)", loc: "Yen Bai", type: "WPC Decking · Cladding · Fencing · Outdoor Furniture", rating: 4, hub: "NORTH", stats: [
       ["EST. REVENUE", "$320M (EuP Group parent)"],
       ["FACTORY", "150,000 m²"],
       ["CAPACITY", "90 containers/month"],
@@ -499,12 +599,8 @@ const Factories = () => {
       "OEM/ODM specialist: WPC decking (standard + premium co-extrusion), wall cladding, DIY fencing, WPC gates, outdoor tables/chairs, shower plates — comprehensive outdoor living catalog.",
       "ISO 9001, ISO 14001, FSC, BSCI Level B, Intertek, TÜV/SGS certified — documentation is export-ready for US buyers.",
       "Already shipping to European DIY retailers at scale — the US is their next target market.",
-      "Location note: Yen Bai Province is ~3.5 hours from Hanoi. Best scheduled as a dedicated day trip or overnight, not combined with other Hanoi-area stops."
+      "Location note: Yen Bai Province is ~3.5 hours from Hanoi. Best scheduled as a dedicated day trip or overnight, not combined with other Hanoi-area stops.",
     ] },
-    { id: "10", name: "Amy Grupo", loc: "Vinh Phuc", type: "Tile · SPC/LVT Flooring · WPC Decking · Wall Panels", rating: 5, hub: "NORTH", details: ["Rapidly growing manufacturer of advanced flooring.", "High-tech production lines producing world-class SPC.", "Strong focus on US export market standards."] },
-    { id: "11", name: "An Phat Holdings", loc: "Hai Phong", type: "SPC/LVT Flooring · PVC Wall Panels · Wall Cladding", rating: 4, hub: "NORTH", details: ["Major plastics conglomerate with dedicated high-tech building materials division.", "Huge scale and raw material integration advantage.", "Reliable OEM partner for global brands."] },
-    { id: "12", name: "Tien Phong Plastic", loc: "Hai Phong", type: "PVC + HDPE Pipes · Pipe Fittings · Plumbing Systems", rating: 2, hub: "NORTH", details: ["Vietnam's oldest and largest pipe manufacturer.", "Supplies major infrastructure and residential projects domestically.", "Exploring OEM and export opportunities."] },
-    { id: "13", name: "Hoa Phat Group", loc: "Hanoi · Meeting Format", type: "Construction Steel · Galvanized + Color-Coated Steel · Metal Roofing", rating: 4, hub: "NORTH", details: ["Vietnam's largest steelmaker and top industrial conglomerate.", "World-class blast furnace technology.", "Supplies raw materials that drive construction costs globally."] },
   ];
 
   const renderStars = (rating: number) => {
@@ -623,27 +719,18 @@ const Factories = () => {
                   {/* Expanded Content */}
                   {isOpen && (
                     <div className="p-8 lg:p-10 pt-0 lg:ml-[80px] border-t border-border-subtle lg:border-t-0 lg:grid lg:grid-cols-[1fr_2.5fr] gap-12 mt-4 lg:mt-0">
-                      {(() => {
-                        const statPairs = f.stats ?? [
-                          ["EST. REVENUE", f.estRev],
-                          ["FACTORY", f.size],
-                          ["MKT SHARE", f.mkt],
-                          ["INVESTORS", f.inv],
-                          ["US PRESENCE", f.us],
-                        ].filter(x => x[1]) as [string, string][];
-                        return statPairs.length > 0 ? (
-                          <div className="grid grid-cols-2 gap-4 mb-8 lg:mb-0">
-                            {statPairs.map(([label, val], idx, arr) => (
-                              <div className={`${idx === arr.length - 1 && arr.length % 2 === 1 ? 'col-span-2' : ''} bg-bg-dark rounded-2xl p-6 flex flex-col justify-center`} key={label}>
-                                <span className="text-[10px] lg:text-[11px] uppercase tracking-[0.2em] font-semibold text-brand-gold/80 mb-2">{label}</span>
-                                <span className="text-base font-medium text-text-heading">{val}</span>
-                              </div>
-                            ))}
-                          </div>
-                        ) : (
-                          <div className="hidden lg:block"></div>
-                        );
-                      })()}
+                      {f.stats && f.stats.length > 0 ? (
+                        <div className="grid grid-cols-2 gap-4 mb-8 lg:mb-0">
+                          {f.stats.map(([label, val], idx, arr) => (
+                            <div className={`${idx === arr.length - 1 && arr.length % 2 === 1 ? 'col-span-2' : ''} bg-bg-dark rounded-2xl p-6 flex flex-col justify-center`} key={label}>
+                              <span className="text-[10px] lg:text-[11px] uppercase tracking-[0.2em] font-semibold text-brand-gold/80 mb-2">{label}</span>
+                              <span className="text-base font-medium text-text-heading">{val}</span>
+                            </div>
+                          ))}
+                        </div>
+                      ) : (
+                        <div className="hidden lg:block"></div>
+                      )}
                       
                       <div className="lg:py-4">
                         <span className="text-[11px] lg:text-xs uppercase tracking-[0.2em] font-semibold text-brand-gold mb-5 block">Why Visit</span>
