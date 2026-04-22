@@ -668,13 +668,13 @@ const Factories = () => {
             <div className="border-t border-border-subtle p-6 lg:p-8 relative">
               <div
                 ref={samplesScrollRef}
-                className="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2 -mb-2"
+                className="flex gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2 -mb-2"
                 style={{ scrollbarWidth: 'none' }}
               >
                 {sampleVideos.map(v => (
                   <div
                     key={v.id}
-                    className="flex flex-col gap-3 snap-start shrink-0 w-full md:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)]"
+                    className="flex flex-col gap-3 snap-start shrink-0 w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/3)]"
                   >
                     <div className="relative w-full overflow-hidden rounded-2xl border border-border-subtle bg-bg-dark" style={{ aspectRatio: '9 / 13' }}>
                       <iframe
