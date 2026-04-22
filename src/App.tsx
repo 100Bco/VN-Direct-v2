@@ -223,7 +223,7 @@ const Problem = () => (
           { icon: <Clock className="text-white" size={32} strokeWidth={1.5} />, title: "Winners Restructure", body: "Those who fix their cost base today will move fast when the market opens back up." }
         ].map((prob, idx) => (
           <article key={idx} className="bg-bg-card hover:bg-bg-card-hover transition-colors rounded-3xl p-6 lg:p-8 flex flex-col items-center text-center shadow-lg">
-            <div className="w-20 h-20 rounded-full bg-gradient-to-b from-[#4A4A4A] to-[#1A1A1A] flex items-center justify-center mb-6 shadow-inner border border-white/5 mx-auto">
+            <div className="w-20 h-20 rounded-full bg-gradient-to-b from-[#4A4A4A] to-[#1A1A1A] flex items-center justify-center mb-6 shadow-inner ring-1 ring-white/15 mx-auto">
               {prob.icon}
             </div>
             <h3 className="text-lg lg:text-xl font-bold text-white mb-2 font-sans tracking-tight">{prob.title}</h3>
@@ -314,7 +314,7 @@ const Vietnam = () => (
           { n: "60%", l: "Lower manufacturing cost vs. China" },
         ].map((stat, i) => (
           <div key={i} className="bg-bg-card hover:bg-bg-card-hover transition-colors rounded-3xl p-6 lg:p-8 flex flex-col items-center text-center shadow-lg">
-            <div className="w-16 h-16 rounded-full bg-gradient-to-b from-[#4A4A4A] to-[#1A1A1A] flex items-center justify-center mb-6 shadow-inner border border-white/5">
+            <div className="w-16 h-16 rounded-full bg-gradient-to-b from-[#4A4A4A] to-[#1A1A1A] flex items-center justify-center mb-6 shadow-inner ring-1 ring-white/15">
               <span className="text-xl font-display text-white font-bold">{stat.n}</span>
             </div>
             <h3 className="text-sm lg:text-base font-bold text-white mb-2 font-sans tracking-tight leading-snug">{stat.l}</h3>
