@@ -129,7 +129,7 @@ const Hero = () => {
   return (
     <header className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden bg-black">
       {/* Full Screen Background Video */}
-      <div className="absolute inset-0 z-0 overflow-hidden bg-black">
+      <div className="absolute top-32 inset-x-0 bottom-0 z-0 overflow-hidden bg-black">
         <div
           className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none transition-opacity duration-700 ${videoReady ? 'opacity-100' : 'opacity-0'}`}
           style={{ width: 'max(356vh, 100vw)', height: 'max(200vh, 56.25vw)' }}
