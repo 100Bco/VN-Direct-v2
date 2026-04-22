@@ -703,20 +703,8 @@ const Factories = () => {
                         allowFullScreen
                         title={`${v.name} sample video`}
                       />
-                      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-bg-card via-bg-card/80 to-transparent" />
                     </div>
-                    <div className="flex items-center justify-between gap-2">
-                      <div className="text-sm font-medium text-text-heading">{v.name}</div>
-                      <a
-                        href={`https://www.linkedin.com/feed/update/urn:li:activity:${v.id}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-[11px] uppercase tracking-[0.15em] font-semibold text-brand-gold hover:text-brand-gold-hover transition-colors"
-                      >
-                        Watch on LinkedIn
-                        <ArrowRight size={12} />
-                      </a>
-                    </div>
+                    <div className="text-sm font-medium text-text-heading">{v.name}</div>
                   </div>
                 ))}
               </div>
