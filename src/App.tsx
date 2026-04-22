@@ -353,8 +353,8 @@ const TripSection = () => (
     <div className="max-w-7xl mx-auto px-6">
       <SectionHeader
         subtitle="The Experience"
-        title="7 days. 10-13 factories. Zero fluff."
-        titleAccent="Zero fluff."
+        title="7 days. 10-13 factories. Zero guesswork."
+        titleAccent="Zero guesswork."
       />
 
       <p className="text-lg lg:text-xl font-light text-text-body leading-relaxed mb-12 max-w-4xl">
