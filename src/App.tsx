@@ -588,7 +588,7 @@ const Factories = () => {
       "Format: commercial briefing (not factory tour) — for volume steel and metal roofing sourcing conversations.",
     ] },
 
-    { id: "+1", name: "EuroStark (EuP Group)", loc: "Yen Bai", type: "WPC Decking · Cladding · Fencing · Outdoor Furniture", rating: 4, hub: "BONUS — YEN BAI PROVINCE · OPTIONAL EXTENSION", stats: [
+    { id: "13", name: "EuroStark (EuP Group)", loc: "Yen Bai", type: "WPC Decking · Cladding · Fencing · Outdoor Furniture", rating: 4, hub: "NORTH", stats: [
       ["EST. REVENUE", "$320M (EuP Group parent)"],
       ["FACTORY", "150,000 m²"],
       ["CAPACITY", "90 containers/month"],
@@ -618,7 +618,7 @@ const Factories = () => {
       <div className="max-w-7xl mx-auto px-6">
         <SectionHeader 
           subtitle="The Manufacturers" 
-          title="12 factories. All vetted. All relevant."
+          title="13 factories. All vetted. All relevant."
           titleAccent="All vetted. All relevant."
         />
         
