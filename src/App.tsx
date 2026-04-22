@@ -125,15 +125,27 @@ const Hero = () => (
   <header className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden bg-black">
     {/* Full Screen Background Video */}
     <div className="absolute inset-0 z-0 overflow-hidden">
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover opacity-[0.35] mix-blend-luminosity"
+      <div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.35] mix-blend-luminosity pointer-events-none"
+        style={{ width: 'max(177.77vh, 100vw)', height: 'max(56.25vw, 100vh)' }}
       >
-        <source src="https://assets.mixkit.co/videos/preview/mixkit-welder-working-on-a-large-piece-of-metal-43034-large.mp4" type="video/mp4" />
-      </video>
+        {React.createElement('wistia-player', {
+          'media-id': '9hbymhvynw',
+          'aspect': '1.7777777777777777',
+          'autoplay': 'true',
+          'muted': 'true',
+          'silent-auto-play': 'true',
+          'playsinline': 'true',
+          'endvideobehavior': 'loop',
+          'controls-visible-on-load': 'false',
+          'playbar': 'false',
+          'settings-control': 'false',
+          'fullscreen-button': 'false',
+          'small-play-button': 'false',
+          'play-button': 'false',
+          style: { width: '100%', height: '100%', display: 'block' },
+        })}
+      </div>
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent mix-blend-multiply" />
       <div className="absolute inset-0 bg-black/50" /> {/* Dark wash to guarantee text contrast */}
     </div>
