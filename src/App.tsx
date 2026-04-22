@@ -126,7 +126,7 @@ const Hero = () => (
     {/* Full Screen Background Video */}
     <div className="absolute inset-0 z-0 overflow-hidden">
       <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.35] mix-blend-luminosity pointer-events-none"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
         style={{ width: 'max(177.77vh, 100vw)', height: 'max(56.25vw, 100vh)' }}
       >
         {React.createElement('wistia-player', {
@@ -147,8 +147,7 @@ const Hero = () => (
           style: { width: '100%', height: '100%', display: 'block' },
         })}
       </div>
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent mix-blend-multiply" />
-      <div className="absolute inset-0 bg-black/50" /> {/* Dark wash to guarantee text contrast */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-black/20 pointer-events-none" />
     </div>
 
     <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
