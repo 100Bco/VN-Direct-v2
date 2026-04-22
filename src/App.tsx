@@ -587,6 +587,20 @@ const Factories = () => {
       "Vietnam's #1 steel producer, Southeast Asia's largest — Top 30 globally. Exports to USA, Canada, Japan.",
       "Format: commercial briefing (not factory tour) — for volume steel and metal roofing sourcing conversations.",
     ] },
+
+    { id: "+1", name: "EuroStark (EuP Group)", loc: "Yen Bai", type: "WPC Decking · Cladding · Fencing · Outdoor Furniture", rating: 4, hub: "BONUS — YEN BAI PROVINCE · OPTIONAL EXTENSION", stats: [
+      ["EST. REVENUE", "$320M (EuP Group parent)"],
+      ["FACTORY", "150,000 m²"],
+      ["CAPACITY", "90 containers/month"],
+      ["CERTIFICATIONS", "ISO 9001 · ISO 14001 · FSC · BSCI · TÜV/SGS"],
+      ["EXPORT", "Germany · France · Italy · NZ · Colombia"],
+    ], details: [
+      "Subsidiary of EuP Group — the world's #1 filler masterbatch producer. Raw material is made in-house, meaning consistent quality and pricing advantage no competitor can match.",
+      "OEM/ODM specialist: WPC decking (standard + premium co-extrusion), wall cladding, DIY fencing, WPC gates, outdoor tables/chairs, shower plates — comprehensive outdoor living catalog.",
+      "ISO 9001, ISO 14001, FSC, BSCI Level B, Intertek, TÜV/SGS certified — documentation is export-ready for US buyers.",
+      "Already shipping to European DIY retailers at scale — the US is their next target market.",
+      "Location note: Yen Bai Province is ~3.5 hours from Hanoi. Best scheduled as a dedicated day trip or overnight, not combined with other Hanoi-area stops.",
+    ] },
   ];
 
   const renderStars = (rating: number) => {
