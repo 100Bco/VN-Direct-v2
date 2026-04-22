@@ -461,13 +461,13 @@ const Factories = () => {
   };
 
   const sampleVideos = [
-    { name: "Eurowindow", id: "7407382456791756801" },
-    { name: "Tien Phong Plastic", id: "7388923049066192896" },
+    { name: "Eurowindow", id: "7452658431347343360", urn: "ugcPost" },
+    { name: "Tien Phong Plastic", id: "7452658751217623040", urn: "ugcPost" },
     { name: "Woodsland", id: "7350501850061713409" },
     { name: "Vina G7", id: "7348646710086201345" },
     { name: "Phu Tai", id: "7347942924719935488" },
     { name: "Vinamilk", id: "7384886610225655808" },
-  ];
+  ] as { name: string; id: string; urn?: string }[];
 
   const samplesScrollRef = useRef<HTMLDivElement>(null);
   const scrollSamples = (dir: 1 | -1) => {
@@ -671,7 +671,7 @@ const Factories = () => {
                   >
                     <div className="relative w-full overflow-hidden rounded-2xl border border-border-subtle bg-bg-dark" style={{ aspectRatio: '4 / 5' }}>
                       <iframe
-                        src={`https://www.linkedin.com/embed/feed/update/urn:li:activity:${v.id}`}
+                        src={`https://www.linkedin.com/embed/feed/update/urn:li:${v.urn ?? 'activity'}:${v.id}`}
                         className="absolute inset-0 w-full h-full"
                         frameBorder={0}
                         allowFullScreen
