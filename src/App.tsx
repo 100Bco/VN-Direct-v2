@@ -123,34 +123,45 @@ const SectionHeader = ({ subtitle, title, titleAccent }: { subtitle: string, tit
   </div>
 );
 
-const Hero = () => (
-  <header className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden bg-black">
-    {/* Full Screen Background Video */}
-    <div className="absolute inset-0 z-0 overflow-hidden">
-      <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
-        style={{ width: 'max(177.77vh, 100vw)', height: 'max(56.25vw, 100vh)' }}
-      >
-        <iframe
-          src="https://fast.wistia.net/embed/iframe/9hbymhvynw?autoPlay=true&muted=true&silentAutoPlay=allow&playsinline=true&playsInline=true&endVideoBehavior=loop&videoFoam=true&controlsVisibleOnLoad=false&playButton=false&smallPlayButton=false&playbar=false&fullscreenButton=false&settingsControl=false&volumeControl=false&playbackRateControl=false&captions=false&wmode=transparent"
-          title="Vietnam Direct 2026 hero reel"
-          allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-          allowFullScreen
-          playsInline
-          className="absolute inset-0 w-full h-full"
-          frameBorder={0}
+const Hero = () => {
+  const [videoReady, setVideoReady] = useState(false);
+
+  return (
+    <header className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden bg-black">
+      {/* Full Screen Background Video */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        {/* Fallback thumbnail — always rendered so it shows if the video fails or is slow */}
+        <img
+          src="/logos/0421%282%29.png"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
         />
+        <div
+          className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none transition-opacity duration-700 ${videoReady ? 'opacity-100' : 'opacity-0'}`}
+          style={{ width: 'max(177.77vh, 100vw)', height: 'max(56.25vw, 100vh)' }}
+        >
+          <iframe
+            src="https://fast.wistia.net/embed/iframe/9hbymhvynw?autoPlay=true&muted=true&silentAutoPlay=allow&playsinline=true&playsInline=true&endVideoBehavior=loop&videoFoam=true&controlsVisibleOnLoad=false&playButton=false&smallPlayButton=false&playbar=false&fullscreenButton=false&settingsControl=false&volumeControl=false&playbackRateControl=false&captions=false&wmode=transparent"
+            title="Vietnam Direct 2026 hero reel"
+            allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+            allowFullScreen
+            playsInline
+            onLoad={() => setVideoReady(true)}
+            className="absolute inset-0 w-full h-full"
+            frameBorder={0}
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-black/20 pointer-events-none" />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-black/20 pointer-events-none" />
-    </div>
 
     <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
       <div className="max-w-4xl relative z-10 w-full mt-10 md:mt-0">
-        <div className="flex flex-wrap items-center justify-start gap-3 mb-6">
-          <span className="text-[11px] uppercase tracking-[0.2em] px-3 py-1 border border-white/20 text-white font-medium rounded-full">
+        <div className="flex flex-nowrap md:flex-wrap items-center justify-start gap-2 md:gap-3 mb-6">
+          <span className="text-[10px] md:text-[11px] uppercase tracking-[0.15em] md:tracking-[0.2em] px-2.5 md:px-3 py-1 border border-white/20 text-white font-medium rounded-full whitespace-nowrap">
             Build Better Series
           </span>
-          <span className="text-[11px] uppercase tracking-[0.2em] px-3 py-1 border border-brand-gold text-brand-gold font-medium rounded-full">
+          <span className="text-[10px] md:text-[11px] uppercase tracking-[0.15em] md:tracking-[0.2em] px-2.5 md:px-3 py-1 border border-brand-gold text-brand-gold font-medium rounded-full whitespace-nowrap">
             By Invitation Only
           </span>
         </div>
@@ -175,7 +186,7 @@ const Hero = () => (
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 md:gap-4 text-left items-stretch">
         <div className="flex items-center gap-3 lg:gap-4 p-4 bg-bg-card/80 backdrop-blur-md rounded-2xl border border-white/10 hover:border-brand-gold/50 transition-colors h-full text-white/80">
           <Calendar className="text-brand-gold shrink-0" size={20} />
-          <div className="text-xs xl:text-sm"><strong className="text-white font-semibold">7 days</strong><br />+ 2 days excursion</div>
+          <div className="text-xs xl:text-sm"><strong className="text-white font-semibold">7 days</strong> <span className="md:hidden">· </span><span className="hidden md:inline"><br /></span>+ 2 days excursion</div>
         </div>
         <div className="flex items-center gap-3 lg:gap-4 p-4 bg-bg-card/80 backdrop-blur-md rounded-2xl border border-white/10 hover:border-brand-gold/50 transition-colors h-full text-white/80">
           <Building className="text-brand-gold shrink-0" size={20} />
@@ -196,8 +207,9 @@ const Hero = () => (
         </a>
       </div>
     </div>
-  </header>
-);
+    </header>
+  );
+};
 
 const Problem = () => (
   <section id="problem" className="py-20 lg:py-28 border-t border-border-subtle bg-bg-alt flex flex-col justify-center min-h-[90vh]">
