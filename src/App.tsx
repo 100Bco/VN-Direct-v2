@@ -474,6 +474,7 @@ const Factories = () => {
     { name: "Woodsland", id: "7350501850061713409" },
     { name: "Vina G7", id: "7348646710086201345" },
     { name: "Phu Tai", id: "7347942924719935488" },
+    { name: "100B Ecosystem", id: "7339505472535740416" },
   ];
 
   const samplesScrollRef = useRef<HTMLDivElement>(null);
