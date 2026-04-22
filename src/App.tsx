@@ -127,9 +127,9 @@ const Hero = () => {
   const [videoReady, setVideoReady] = useState(false);
 
   return (
-    <header className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden bg-black">
+    <header className="relative min-h-[100svh] md:min-h-screen flex items-center pt-20 pb-4 md:pt-32 md:pb-20 overflow-hidden bg-black">
       {/* Full Screen Background Video */}
-      <div className="absolute top-32 inset-x-0 bottom-0 z-0 overflow-hidden bg-black">
+      <div className="absolute top-20 md:top-32 inset-x-0 bottom-0 z-0 overflow-hidden bg-black">
         <div
           className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none transition-opacity duration-700 ${videoReady ? 'opacity-100' : 'opacity-0'}`}
           style={{ width: 'max(356vh, 100vw)', height: 'max(200vh, 56.25vw)' }}
@@ -150,7 +150,7 @@ const Hero = () => {
 
     <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
       <div className="max-w-4xl relative z-10 w-full mt-10 md:mt-0">
-        <div className="flex flex-nowrap md:flex-wrap items-center justify-start gap-2 md:gap-3 mb-6">
+        <div className="flex flex-nowrap md:flex-wrap items-center justify-start gap-2 md:gap-3 mb-3 md:mb-6">
           <span className="text-[10px] md:text-[11px] uppercase tracking-[0.15em] md:tracking-[0.2em] px-2.5 md:px-3 py-1 border border-white/20 text-white font-medium rounded-full whitespace-nowrap">
             Build Better Series
           </span>
@@ -159,42 +159,42 @@ const Hero = () => {
           </span>
         </div>
         
-        <div className="flex items-center justify-start gap-4 mb-6">
+        <div className="flex items-center justify-start gap-4 mb-3 md:mb-6">
           <div className="w-12 h-px bg-brand-gold"></div>
-          <p className="text-xs md:text-sm font-medium tracking-[0.15em] uppercase text-brand-gold">May 30 – June 6, 2026</p>
+          <p className="text-[11px] md:text-sm font-medium tracking-[0.15em] uppercase text-brand-gold">May 30 – June 6, 2026</p>
         </div>
-        
-        <h1 className="text-6xl md:text-8xl lg:text-[120px] font-display leading-[0.85] tracking-tight text-white mb-6">
+
+        <h1 className="text-[44px] md:text-8xl lg:text-[120px] font-display leading-[0.85] tracking-tight text-white mb-3 md:mb-6">
           VIETNAM<br />
           <span className="text-gradient-gold">DIRECT</span><br />
-          <em className="font-display italic font-light opacity-[0.15] block mt-2 text-6xl md:text-8xl lg:text-[120px] leading-[0.7]">2026</em>
+          <em className="font-display italic font-light opacity-[0.15] block mt-1 md:mt-2 text-[44px] md:text-8xl lg:text-[120px] leading-[0.7]">2026</em>
         </h1>
-        
-        <p className="text-lg md:text-xl lg:text-2xl font-light text-white mb-8 leading-snug max-w-2xl">
+
+        <p className="text-sm md:text-xl lg:text-2xl font-light text-white mb-4 md:mb-8 leading-snug max-w-2xl">
           Source materials <strong className="font-medium text-gradient-gold">straight from the factory.</strong><br />
           <span className="text-white/80">Cut 20–25% off your cost sheet. No middlemen.</span>
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 md:gap-4 text-left items-stretch">
-        <div className="flex items-center gap-3 lg:gap-4 p-4 bg-bg-card/80 backdrop-blur-md rounded-2xl border border-white/10 hover:border-brand-gold/50 transition-colors h-full text-white/80">
-          <Calendar className="text-brand-gold shrink-0" size={20} />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2 md:gap-4 text-left items-stretch">
+        <div className="flex items-center gap-3 lg:gap-4 p-2.5 md:p-4 bg-bg-card/80 backdrop-blur-md rounded-2xl border border-white/10 hover:border-brand-gold/50 transition-colors h-full text-white/80">
+          <Calendar className="text-brand-gold shrink-0" size={18} />
           <div className="text-xs xl:text-sm"><strong className="text-white font-semibold">7 days</strong> <span className="md:hidden">· </span><span className="hidden md:inline"><br /></span>+ 2 days excursion</div>
         </div>
-        <div className="flex items-center gap-3 lg:gap-4 p-4 bg-bg-card/80 backdrop-blur-md rounded-2xl border border-white/10 hover:border-brand-gold/50 transition-colors h-full text-white/80">
-          <Building className="text-brand-gold shrink-0" size={20} />
+        <div className="flex items-center gap-3 lg:gap-4 p-2.5 md:p-4 bg-bg-card/80 backdrop-blur-md rounded-2xl border border-white/10 hover:border-brand-gold/50 transition-colors h-full text-white/80">
+          <Building className="text-brand-gold shrink-0" size={18} />
           <div className="text-xs xl:text-sm"><strong className="text-white font-semibold">10-13</strong> Hand-Picked Factories</div>
         </div>
-        <div className="flex items-center gap-3 lg:gap-4 p-4 bg-bg-card/80 backdrop-blur-md rounded-2xl border border-white/10 hover:border-brand-gold/50 transition-colors h-full text-white/80">
-          <Users className="text-brand-gold shrink-0" size={20} />
+        <div className="flex items-center gap-3 lg:gap-4 p-2.5 md:p-4 bg-bg-card/80 backdrop-blur-md rounded-2xl border border-white/10 hover:border-brand-gold/50 transition-colors h-full text-white/80">
+          <Users className="text-brand-gold shrink-0" size={18} />
           <div className="text-xs xl:text-sm"><strong className="text-white font-semibold">Limited Seats</strong> · Vetted Attendees</div>
         </div>
-        <div className="flex items-center gap-3 lg:gap-4 p-4 bg-bg-card/80 backdrop-blur-md rounded-2xl border border-white/10 hover:border-brand-gold/50 transition-colors h-full text-white/80">
-          <Award className="text-brand-gold shrink-0" size={20} />
+        <div className="flex items-center gap-3 lg:gap-4 p-2.5 md:p-4 bg-bg-card/80 backdrop-blur-md rounded-2xl border border-white/10 hover:border-brand-gold/50 transition-colors h-full text-white/80">
+          <Award className="text-brand-gold shrink-0" size={18} />
           <div className="text-xs xl:text-sm whitespace-nowrap">Hosted by <strong className="text-white font-semibold">100B</strong></div>
         </div>
 
-        <a href="#apply" className="flex items-center justify-center gap-2 p-4 w-full h-full btn-silver-gradient rounded-2xl text-[13px] xl:text-sm group sm:col-span-2 lg:col-span-1">
+        <a href="#apply" className="flex items-center justify-center gap-2 p-3 md:p-4 w-full h-full btn-silver-gradient rounded-2xl text-[13px] xl:text-sm group sm:col-span-2 lg:col-span-1">
           <span className="font-bold whitespace-nowrap">Request Invitation</span>
           <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform shrink-0" />
         </a>
