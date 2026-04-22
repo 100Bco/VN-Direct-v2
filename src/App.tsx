@@ -131,23 +131,15 @@ const Hero = () => (
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
         style={{ width: 'max(177.77vh, 100vw)', height: 'max(56.25vw, 100vh)' }}
       >
-        {React.createElement('wistia-player', {
-          'media-id': '9hbymhvynw',
-          'aspect': '1.7777777777777777',
-          'autoplay': 'true',
-          'muted': 'true',
-          'silent-auto-play': 'true',
-          'playsinline': 'true',
-          'endvideobehavior': 'loop',
-          'end-video-behavior': 'loop',
-          'controls-visible-on-load': 'false',
-          'playbar': 'false',
-          'settings-control': 'false',
-          'fullscreen-button': 'false',
-          'small-play-button': 'false',
-          'play-button': 'false',
-          style: { width: '100%', height: '100%', display: 'block' },
-        })}
+        <iframe
+          src="https://fast.wistia.net/embed/iframe/9hbymhvynw?autoPlay=true&muted=true&silentAutoPlay=allow&playsinline=true&playsInline=true&endVideoBehavior=loop&videoFoam=true&controlsVisibleOnLoad=false&playButton=false&smallPlayButton=false&playbar=false&fullscreenButton=false&settingsControl=false&volumeControl=false&playbackRateControl=false&captions=false&wmode=transparent"
+          title="Vietnam Direct 2026 hero reel"
+          allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+          allowFullScreen
+          playsInline
+          className="absolute inset-0 w-full h-full"
+          frameBorder={0}
+        />
       </div>
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-black/20 pointer-events-none" />
     </div>
@@ -353,8 +345,8 @@ const TripSection = () => (
     <div className="max-w-7xl mx-auto px-6">
       <SectionHeader
         subtitle="The Experience"
-        title="7 days. 10-13 factories. Zero fluff."
-        titleAccent="Zero fluff."
+        title="7 days. 10-13 factories. Zero guesswork."
+        titleAccent="Zero guesswork."
       />
 
       <p className="text-lg lg:text-xl font-light text-text-body leading-relaxed mb-12 max-w-4xl">
@@ -667,24 +659,6 @@ const Factories = () => {
           </button>
           {samplesOpen && (
             <div className="border-t border-border-subtle p-6 lg:p-8 relative">
-              <div className="flex items-center justify-end gap-3 mb-4">
-                <button
-                  type="button"
-                  aria-label="Previous videos"
-                  onClick={() => scrollSamples(-1)}
-                  className="w-10 h-10 rounded-full border border-border-subtle flex items-center justify-center text-text-body hover:text-text-heading hover:border-text-heading transition-colors"
-                >
-                  <ChevronLeft size={16} />
-                </button>
-                <button
-                  type="button"
-                  aria-label="Next videos"
-                  onClick={() => scrollSamples(1)}
-                  className="w-10 h-10 rounded-full border border-border-subtle flex items-center justify-center text-text-body hover:text-text-heading hover:border-text-heading transition-colors"
-                >
-                  <ChevronRight size={16} />
-                </button>
-              </div>
               <div
                 ref={samplesScrollRef}
                 className="flex gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2 -mb-2"
@@ -707,6 +681,24 @@ const Factories = () => {
                     <div className="text-sm font-medium text-text-heading">{v.name}</div>
                   </div>
                 ))}
+              </div>
+              <div className="mt-6 flex items-center justify-center gap-3">
+                <button
+                  type="button"
+                  aria-label="Previous videos"
+                  onClick={() => scrollSamples(-1)}
+                  className="w-10 h-10 rounded-full border border-border-subtle flex items-center justify-center text-text-body hover:text-text-heading hover:border-text-heading transition-colors"
+                >
+                  <ChevronLeft size={16} />
+                </button>
+                <button
+                  type="button"
+                  aria-label="Next videos"
+                  onClick={() => scrollSamples(1)}
+                  className="w-10 h-10 rounded-full border border-border-subtle flex items-center justify-center text-text-body hover:text-text-heading hover:border-text-heading transition-colors"
+                >
+                  <ChevronRight size={16} />
+                </button>
               </div>
             </div>
           )}
