@@ -667,6 +667,24 @@ const Factories = () => {
           </button>
           {samplesOpen && (
             <div className="border-t border-border-subtle p-6 lg:p-8 relative">
+              <div className="flex items-center justify-end gap-3 mb-4">
+                <button
+                  type="button"
+                  aria-label="Previous videos"
+                  onClick={() => scrollSamples(-1)}
+                  className="w-10 h-10 rounded-full border border-border-subtle flex items-center justify-center text-text-body hover:text-text-heading hover:border-text-heading transition-colors"
+                >
+                  <ChevronLeft size={16} />
+                </button>
+                <button
+                  type="button"
+                  aria-label="Next videos"
+                  onClick={() => scrollSamples(1)}
+                  className="w-10 h-10 rounded-full border border-border-subtle flex items-center justify-center text-text-body hover:text-text-heading hover:border-text-heading transition-colors"
+                >
+                  <ChevronRight size={16} />
+                </button>
+              </div>
               <div
                 ref={samplesScrollRef}
                 className="flex gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2 -mb-2"
@@ -689,24 +707,6 @@ const Factories = () => {
                     <div className="text-sm font-medium text-text-heading">{v.name}</div>
                   </div>
                 ))}
-              </div>
-              <div className="mt-6 flex items-center justify-end gap-3">
-                <button
-                  type="button"
-                  aria-label="Previous videos"
-                  onClick={() => scrollSamples(-1)}
-                  className="w-10 h-10 rounded-full border border-border-subtle flex items-center justify-center text-text-body hover:text-text-heading hover:border-text-heading transition-colors"
-                >
-                  <ChevronLeft size={16} />
-                </button>
-                <button
-                  type="button"
-                  aria-label="Next videos"
-                  onClick={() => scrollSamples(1)}
-                  className="w-10 h-10 rounded-full border border-border-subtle flex items-center justify-center text-text-body hover:text-text-heading hover:border-text-heading transition-colors"
-                >
-                  <ChevronRight size={16} />
-                </button>
               </div>
             </div>
           )}
