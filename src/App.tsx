@@ -676,7 +676,7 @@ const Factories = () => {
                     key={v.id}
                     className="flex flex-col gap-3 snap-start shrink-0 w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/3)]"
                   >
-                    <div className="relative w-full overflow-hidden rounded-2xl border border-border-subtle bg-bg-dark" style={{ aspectRatio: '9 / 13' }}>
+                    <div className="relative w-full overflow-hidden rounded-2xl border border-border-subtle bg-bg-dark" style={{ aspectRatio: '9 / 16' }}>
                       <iframe
                         src={`https://www.linkedin.com/embed/feed/update/urn:li:activity:${v.id}`}
                         className="absolute inset-0 w-full h-full"
