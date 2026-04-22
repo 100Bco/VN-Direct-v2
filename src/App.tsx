@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { 
-  ArrowRight, 
-  MapPin, 
-  Calendar, 
-  Users, 
-  ChevronDown, 
-  Menu, 
+import React, { useState, useEffect, useRef } from 'react';
+import {
+  ArrowRight,
+  MapPin,
+  Calendar,
+  Users,
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+  Menu,
   X,
   LineChart,
   Landmark,
@@ -472,7 +474,15 @@ const Factories = () => {
     { name: "Woodsland", id: "7350501850061713409" },
     { name: "Vina G7", id: "7348646710086201345" },
     { name: "Phu Tai", id: "7347942924719935488" },
+    { name: "Hexagon", id: "7339505472535740416" },
   ];
+
+  const samplesScrollRef = useRef<HTMLDivElement>(null);
+  const scrollSamples = (dir: 1 | -1) => {
+    const el = samplesScrollRef.current;
+    if (!el) return;
+    el.scrollBy({ left: el.clientWidth * dir, behavior: 'smooth' });
+  };
 
   const factories = [
     { id: "01", name: "An Cuong Wood", loc: "Binh Duong", type: "Interior Panels · SPC Flooring · Wall Panels · Doors", rating: 5, hub: "SOUTH — HO CHI MINH CITY · MAY 31 – JUN 2", stats: [
@@ -656,21 +666,48 @@ const Factories = () => {
             </span>
           </button>
           {samplesOpen && (
-            <div className="border-t border-border-subtle p-6 lg:p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {sampleVideos.map(v => (
-                <div key={v.id} className="flex flex-col gap-3">
-                  <div className="relative w-full overflow-hidden rounded-2xl border border-border-subtle bg-bg-dark" style={{ aspectRatio: '9 / 13' }}>
-                    <iframe
-                      src={`https://www.linkedin.com/embed/feed/update/urn:li:activity:${v.id}`}
-                      className="absolute inset-0 w-full h-full"
-                      frameBorder={0}
-                      allowFullScreen
-                      title={`${v.name} sample video`}
-                    />
+            <div className="border-t border-border-subtle p-6 lg:p-8 relative">
+              <div
+                ref={samplesScrollRef}
+                className="flex gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2 -mb-2"
+                style={{ scrollbarWidth: 'none' }}
+              >
+                {sampleVideos.map(v => (
+                  <div
+                    key={v.id}
+                    className="flex flex-col gap-3 snap-start shrink-0 w-[calc((100%-32px)/3)] md:w-[calc((100%-48px)/3)]"
+                  >
+                    <div className="relative w-full overflow-hidden rounded-2xl border border-border-subtle bg-bg-dark" style={{ aspectRatio: '9 / 16' }}>
+                      <iframe
+                        src={`https://www.linkedin.com/embed/feed/update/urn:li:activity:${v.id}`}
+                        className="absolute inset-0 w-full h-full"
+                        frameBorder={0}
+                        allowFullScreen
+                        title={`${v.name} sample video`}
+                      />
+                    </div>
+                    <div className="text-sm font-medium text-text-heading">{v.name}</div>
                   </div>
-                  <div className="text-sm font-medium text-text-heading">{v.name}</div>
-                </div>
-              ))}
+                ))}
+              </div>
+              <div className="mt-6 flex items-center justify-end gap-3">
+                <button
+                  type="button"
+                  aria-label="Previous videos"
+                  onClick={() => scrollSamples(-1)}
+                  className="w-10 h-10 rounded-full border border-border-subtle flex items-center justify-center text-text-body hover:text-text-heading hover:border-text-heading transition-colors"
+                >
+                  <ChevronLeft size={16} />
+                </button>
+                <button
+                  type="button"
+                  aria-label="Next videos"
+                  onClick={() => scrollSamples(1)}
+                  className="w-10 h-10 rounded-full border border-border-subtle flex items-center justify-center text-text-body hover:text-text-heading hover:border-text-heading transition-colors"
+                >
+                  <ChevronRight size={16} />
+                </button>
+              </div>
             </div>
           )}
         </div>
