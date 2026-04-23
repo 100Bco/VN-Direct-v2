@@ -131,8 +131,7 @@ const Hero = () => {
       {/* Full Screen Background Video */}
       <div className="absolute top-20 md:top-32 inset-x-0 bottom-0 z-0 overflow-hidden bg-black">
         <div
-          className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none transition-opacity duration-700 ${videoReady ? 'opacity-100' : 'opacity-0'}`}
-          style={{ width: 'max(356vh, 100vw)', height: 'max(200vh, 56.25vw)' }}
+          className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none transition-opacity duration-700 w-[max(356vh,100vw)] h-[max(200vh,56.25vw)] md:w-[max(177.77vh,100vw)] md:h-[max(56.25vw,100vh)] ${videoReady ? 'opacity-100' : 'opacity-0'}`}
         >
           <iframe
             src="https://fast.wistia.net/embed/iframe/9hbymhvynw?autoPlay=true&muted=true&silentAutoPlay=allow&playsinline=true&playsInline=true&endVideoBehavior=loop&videoFoam=true&controlsVisibleOnLoad=false&playButton=false&smallPlayButton=false&playbar=false&fullscreenButton=false&settingsControl=false&volumeControl=false&playbackRateControl=false&captions=false&wmode=transparent"
