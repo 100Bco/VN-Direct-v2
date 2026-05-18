@@ -51,7 +51,7 @@ CTA nav: **"Đăng Ký Tham Gia"** (silver gradient button)
 | Icon | Title | Sub |
 | --- | --- | --- |
 | `Calendar` | **7 ngày** | + 2 ngày excursion |
-| `Users` | **4 buyers** | nhà phát triển BĐS Texas |
+| `Users` | **5 buyers** | nhà phát triển BĐS & developer Mỹ |
 | `LineChart` | **$500M+** | combined active pipeline |
 | `Building` | **10–13** | nhà máy được tuyển chọn |
 | CTA card | **Đăng Ký Tham Gia** → | `btn-silver-gradient` |
@@ -113,10 +113,10 @@ CTA nav: **"Đăng Ký Tham Gia"** (silver gradient button)
 **Eyebrow:** `Đoàn buyers chiến lược`
 
 **H2:**
-> Bốn nhà phát triển BĐS hàng đầu Texas — *cùng một chuyến đi*.
+> Năm nhà phát triển BĐS hàng đầu — *cùng một chuyến đi*.
 
 **Lead:**
-> Quý Nhà máy không gặp 1 khách hàng. Quý vị gặp một nhóm buyers với **combined active pipeline trên $500 triệu USD** — đang xây dựng, đang thiết kế, đang phát triển ở Texas ngay tại thời điểm này. Mỗi người mang theo một profile dự án riêng, từ luxury custom home đến multi-family 320-unit đến retail Class-A.
+> Quý Nhà máy không gặp 1 khách hàng. Quý vị gặp một nhóm buyers với **combined active pipeline trên $500 triệu USD** — đang xây dựng, đang thiết kế, đang phát triển ở Mỹ và Bắc Mỹ ngay tại thời điểm này. Mỗi người mang theo một profile dự án riêng: từ luxury custom home, multi-family 320-unit, retail Class-A, đến commercial development & capital markets advisory.
 
 **Buyer cards (4):**
 
@@ -187,9 +187,34 @@ CTA nav: **"Đăng Ký Tham Gia"** (silver gradient button)
 
 ---
 
+### Mick Hawton
+*Partner, Headwater (Real Estate Developer) | Bắc Mỹ*
+
+> 30+ năm kinh nghiệm trong phát triển kinh doanh và vận hành. Background trải dài qua bất động sản thương mại, leadership development, capital markets, group health insurance và công nghệ. Mang góc nhìn toàn diện từ phát triển dự án đến chiến lược tài chính.
+
+**Track record & vai trò:**
+- **Partner & cựu Chief Strategy Officer** tại Headwater — phát triển BĐS thương mại đầu cuối: property management, development, tenant representation
+- **Vice President, Capital Markets** tại Avison Young (Canada) — phân tích tài chính & chiến lược đầu tư
+- **Vice President, Operations** tại Trig Life Services — tối ưu vận hành ngành insurance
+- **Managing Principal** tại OneDigital — giải pháp employee benefits quy mô lớn
+- **Founder** Roco Racing (amusement & attractions) và Hawton Print Management
+- **Strategy Planning Coordinator & Project Manager** — Minnesota Department of Health
+
+**Học vấn:**
+- Master of Public Affairs — Humphrey School of Public Affairs
+- Bachelor of Arts — University of Minnesota
+
+**Cộng đồng:**
+- Ecclesiastical leadership volunteer từ 1987
+- Thành viên các non-profit board tập trung vào phát triển kinh tế & xoá nghèo liên thế hệ
+
+*Quan tâm: vật liệu cho commercial real estate development, góc nhìn capital markets về chuỗi cung ứng & long-term supply partnership.*
+
+---
+
 **Closing tag (centered):**
 > **Combined pipeline: $500M+**
-> *Luxury custom homes • Multi-family • Retail Class-A • Mixed-use*
+> *Luxury custom homes • Multi-family • Retail Class-A • Commercial development • Capital markets advisory*
 
 ---
 
@@ -313,7 +338,7 @@ CTA nav: **"Đăng Ký Tham Gia"** (silver gradient button)
 
 **Mini-stats:**
 - **2025**: 1 khách (Lezlie) • 6 ngày • proof-of-concept
-- **2026**: 4 buyers • 7+2 ngày • 10–13 nhà máy • $500M+ pipeline
+- **2026**: 5 buyers • 7+2 ngày • 10–13 nhà máy • $500M+ pipeline
 
 ---
 
@@ -411,7 +436,7 @@ CTA nav: **"Đăng Ký Tham Gia"** (silver gradient button)
 1. Hero (eyebrow + H1 + lead + 5 stat cards)
 2. Vấn đề (3 pain cards)
 3. Cơ hội (4 stat cards về Texas)
-4. Đoàn buyers (4 buyer profile cards) ← **Trọng tâm trang**
+4. Đoàn buyers (5 buyer profile cards) ← **Trọng tâm trang**
 5. Chương trình (3 format cards + bullet mục tiêu)
 6. Lợi ích (6 benefit cards)
 7. Tiêu chí (5-item checklist)
