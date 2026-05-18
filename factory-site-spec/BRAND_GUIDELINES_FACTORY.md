@@ -208,7 +208,71 @@ Site nhà máy có section "Đoàn buyers" (**5 cards**) — đây là **pattern
 
 Layout grid khuyến nghị: `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6` — desktop 3+2, card cuối có thể `lg:col-start-2` để center row 2.
 
-### 2.6 Number/stat emphasis — money & numbers
+### 2.6 Hero background video — REUSE từ site mẹ
+
+Hero của site nhà máy **dùng lại video Wistia của site mẹ VN Direct 2026** — không phát triển mới, không quay lại. Đảm bảo hai site có visual continuity tuyệt đối ở first impression.
+
+**Tại sao reuse:**
+- Buyers + nhà máy thấy 2 site cạnh nhau phải nhận ra ngay là cùng một thương hiệu.
+- Video Wistia (ID `9hbymhvynw`) đã được optimize cho hero — autoplay, muted, loop, no controls.
+- Tránh chi phí + thời gian quay/edit/host video riêng.
+
+**Copy-paste 1:1 từ `src/App.tsx` site mẹ** (đã fix uncropped desktop):
+
+```tsx
+const Hero = () => {
+  const [videoReady, setVideoReady] = useState(false);
+
+  return (
+    <header className="relative min-h-[100svh] md:min-h-screen flex items-center
+                       pt-20 pb-4 md:pt-32 md:pb-20 overflow-hidden bg-black">
+      {/* Full Screen Background Video — REUSE từ VN Direct site mẹ */}
+      <div className="absolute top-20 md:top-0 inset-x-0 bottom-0 z-0
+                      overflow-hidden bg-black">
+        <div
+          className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+                      pointer-events-none transition-opacity duration-700
+                      w-[max(356vh,100vw)] h-[max(200vh,56.25vw)]
+                      md:w-[max(177.77vh,100vw)] md:h-[max(56.25vw,100vh)]
+                      ${videoReady ? 'opacity-100' : 'opacity-0'}`}
+        >
+          <iframe
+            src="https://fast.wistia.net/embed/iframe/9hbymhvynw?autoPlay=true&muted=true&silentAutoPlay=allow&playsinline=true&playsInline=true&endVideoBehavior=loop&videoFoam=true&controlsVisibleOnLoad=false&playButton=false&smallPlayButton=false&playbar=false&fullscreenButton=false&settingsControl=false&volumeControl=false&playbackRateControl=false&captions=false&wmode=transparent"
+            title="Vietnam Direct 2026 hero reel"
+            allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+            allowFullScreen
+            playsInline
+            onLoad={() => setVideoReady(true)}
+            className="absolute inset-0 w-full h-full"
+            frameBorder={0}
+          />
+        </div>
+        {/* Gradient overlay — readability cho text hero */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-black/20
+                        pointer-events-none" />
+      </div>
+
+      {/* Hero content (eyebrow, H1, lead, stat row) — content tiếng Việt từ CONTENT_DRAFT */}
+      <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
+        {/* ... */}
+      </div>
+    </header>
+  );
+};
+```
+
+**Lưu ý kỹ thuật:**
+- Wistia ID `9hbymhvynw` không đổi — cùng asset với site mẹ.
+- Container sizing đã responsive cho desktop (uncropped 16:9) + mobile (tall fill).
+- Gradient overlay từ `black/20` → `black/10` → `black/60` quan trọng để text tiếng Việt (đặc biệt dấu trên đỉnh) đọc được rõ trên video.
+- Quan trọng: KHÔNG đổi `top-20 md:top-0` — đây là fix gần nhất ở site mẹ để loại bỏ thanh đen desktop. Site con phải copy nguyên hành vi.
+
+**Nếu cần reskin lần sau:**
+Khi đổi video cho cả ecosystem 100B, đổi ở 1 chỗ (Wistia console) — cả site mẹ + site nhà máy đều tự cập nhật vì cùng ID. Không cần redeploy.
+
+---
+
+### 2.7 Number/stat emphasis — money & numbers
 
 Khi nhấn mạnh con số (M&A, pipeline, GDP), dùng pattern **`font-display + text-gradient-gold`**:
 
@@ -320,7 +384,7 @@ Giữ nguyên rule site mẹ:
 | Photo Kameron Schram | **CẦN BỔ SUNG** — 400x400 min, headshot pro | Cần thu thập |
 | Photo Ricardo Rubiano | **CẦN BỔ SUNG** — 400x400 min, headshot pro | Cần thu thập |
 | Photo Mick Hawton | **CẦN BỔ SUNG** — 400x400 min, headshot pro | Cần thu thập |
-| Hero video / fallback | Tái sử dụng từ site mẹ HOẶC quay riêng cảnh factory | TBD |
+| Hero video | **Tái sử dụng nguyên Wistia ID `9hbymhvynw` của site mẹ** — không quay mới. Xem mục 2.6. | 100B |
 | Font UTM ClassizismAntiqua | `/public/fonts/UTM-Classizism-Antiqua.ttf` (copy từ site mẹ) | 100B |
 | Favicon | Logo 100B 32x32 | 100B |
 
