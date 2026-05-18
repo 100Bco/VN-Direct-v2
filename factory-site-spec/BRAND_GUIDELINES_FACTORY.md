@@ -208,60 +208,7 @@ Site nhà máy có section "Đoàn buyers" (**5 cards**) — đây là **pattern
 
 Layout grid khuyến nghị: `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6` — desktop 3+2, card cuối có thể `lg:col-start-2` để center row 2.
 
-### 2.6 Form styling (mới — site mẹ không có form chính)
-
-Site nhà máy có form đăng ký. Pattern đề xuất:
-
-```html
-<!-- Input -->
-<input class="w-full px-4 py-3 bg-bg-card border border-border-subtle rounded-xl
-              text-text-heading placeholder:text-text-muted
-              focus:border-brand-gold focus:outline-none transition-colors" />
-
-<!-- Label -->
-<label class="block text-xs uppercase tracking-[0.15em] text-text-muted mb-2">
-  Tên Công Ty / Nhà Máy
-</label>
-
-<!-- Textarea -->
-<textarea class="... min-h-[120px] resize-none" />
-
-<!-- Submit -->
-<button class="w-full md:w-auto px-12 py-4 btn-silver-gradient rounded-2xl
-               uppercase tracking-widest text-sm">
-  Gửi Đăng Ký
-</button>
-```
-
-Form container: `bg-bg-alt rounded-3xl p-8 lg:p-12 border border-border-subtle`.
-
-### 2.7 Table styling — schedule timeline (mới)
-
-Schedule 7+2 ngày dạng table:
-
-```html
-<div class="overflow-hidden rounded-3xl border border-border-subtle">
-  <table class="w-full">
-    <thead class="bg-bg-alt">
-      <tr>
-        <th class="text-left px-6 py-4 text-xs uppercase tracking-[0.2em]
-                   text-brand-gold font-semibold">Ngày</th>
-        <th class="text-left px-6 py-4 text-xs uppercase tracking-[0.2em]
-                   text-brand-gold font-semibold">Hoạt Động</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="border-t border-border-subtle hover:bg-white/[0.02] transition-colors">
-        <td class="px-6 py-5 font-display text-lg text-text-heading">D1 — 30/05</td>
-        <td class="px-6 py-5 text-text-body">Đoàn đến TP.HCM. Welcome dinner.</td>
-      </tr>
-      <!-- ... -->
-    </tbody>
-  </table>
-</div>
-```
-
-### 2.8 Number/stat emphasis — money & numbers
+### 2.6 Number/stat emphasis — money & numbers
 
 Khi nhấn mạnh con số (M&A, pipeline, GDP), dùng pattern **`font-display + text-gradient-gold`**:
 
@@ -292,9 +239,6 @@ Khác site mẹ ở chỗ section "Đoàn buyers" là **trọng tâm** (không p
 | Lợi ích | M | 6 benefit cards |
 | Tiêu chí | S | 5-item checklist (compact) |
 | Về 100B | M | 5 service cards |
-| Track record | S | Compare 2025 vs 2026, compact |
-| Lịch trình | M | Schedule table |
-| Đăng ký | L | Form full-width, sticky CTA |
 
 **Section "Đoàn buyers" nên có background subtle khác** để stand out:
 - Option A: `bg-bg-alt` (đen ấm hơn)
@@ -337,39 +281,30 @@ Pattern đề xuất cho quote từ Tú Mạc hoặc Lezlie:
 
 ---
 
-## 5. ACCESSIBILITY & VIETNAMESE INPUT
+## 5. ACCESSIBILITY & VIETNAMESE TEXT
 
-### 5.1 Form input
+### 5.1 Lang attribute
 
-Form nhập tiếng Việt → đảm bảo:
-- `lang="vi"` ở `<html>` element
-- Input không strip dấu (default browser behavior OK)
-- Placeholder text dùng tiếng Việt có dấu, không Telex
+`<html lang="vi">` ở root document — bắt buộc cho screen reader & spell-check tiếng Việt.
 
-### 5.2 Số điện thoại / Zalo field
-
-Nhà máy VN dùng Zalo phổ biến hơn email. Form nên có **field riêng cho Zalo** bên cạnh email:
-
-```html
-<label>Zalo / Phone</label>
-<input type="tel" placeholder="VD: 0901 234 567" />
-```
-
-### 5.3 Selection bg cho tiếng Việt
+### 5.2 Selection bg cho tiếng Việt
 
 Giữ `selection:bg-brand-gold/30` từ site mẹ. Test với text có dấu — đảm bảo highlight không cắt dấu trên.
+
+### 5.3 CTA link target
+
+Site này không có form. CTA "Liên Hệ 100B" trỏ trực tiếp đến `mailto:global@100b.co?subject=VN%20Direct%202026%20-%20Đăng%20ký%20nhà%20máy`. Subject pre-fill giúp inbox 100B phân loại.
 
 ---
 
 ## 6. MOTION & INTERACTION — KEEP MINIMAL
 
 Giữ nguyên rule site mẹ:
-- Chỉ animate state change (hover, open/close, form focus)
+- Chỉ animate state change (hover, open/close)
 - Không scroll-reveal, không parallax
 - Duration: `duration-200` (snappy) | `duration-300` (default) | `duration-700` (fade-in lớn)
 
 **Bổ sung cho site nhà máy**:
-- Form submit success: subtle scale + opacity transition (300ms), không confetti / animation màu mè.
 - Tab/accordion buyer cards (nếu có): chevron rotate-180, dùng đúng pattern accordion site mẹ.
 
 ---
@@ -397,16 +332,16 @@ Giữ nguyên rule site mẹ:
 2. Copy `/public/fonts/` và `/public/logos/` từ repo VN-Direct-v2.
 3. Copy `BRAND_GUIDELINES.md` của site mẹ → đặt cùng cấp `BRAND_GUIDELINES_FACTORY.md` (file này).
 4. Copy `index.css` từ site mẹ — KHÔNG sửa `@theme` block.
-5. Build từng section theo `CONTENT_DRAFT.md` order. Mỗi section dùng template "Section template" trong site mẹ mục 11.
-6. Section "Đoàn buyers" — implement layout 2x2 cards (xem mục 2.5 file này).
-7. Section "Đăng ký" — form theo mục 2.6 file này, POST endpoint sang backend 100B (TBD).
+5. Build 9 section theo `CONTENT_DRAFT.md` order. Mỗi section dùng template "Section template" trong site mẹ mục 11.
+6. Section "Đoàn buyers" — implement layout 3+2 cards (xem mục 2.5 file này).
+7. CTA "Liên Hệ 100B" — trỏ trực tiếp `mailto:global@100b.co` với pre-fill subject.
 8. Set `lang="vi"` ở `<html>`.
 9. Test responsive mobile-first (Tailwind breakpoints `md`, `lg`).
 10. Pre-launch checklist:
     - [ ] Tất cả heading + body có dấu render đúng
     - [ ] CTA tiếng Việt đúng Title Case
     - [ ] 5 photos buyer đã có
-    - [ ] Form POST hoạt động
+    - [ ] `mailto:` link hoạt động, có pre-fill subject
     - [ ] Link sang site mẹ VN Direct 2026 ở footer
     - [ ] Open Graph / meta tiếng Việt (title, description)
 

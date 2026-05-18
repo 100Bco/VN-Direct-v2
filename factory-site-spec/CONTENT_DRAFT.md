@@ -21,9 +21,8 @@
 | Lợi ích | `#loi-ich` |
 | Tiêu chí | `#tieu-chi` |
 | Về 100B | `#100b` |
-| Đăng ký | `#dang-ky` |
 
-CTA nav: **"Đăng Ký Tham Gia"** (silver gradient button)
+CTA nav: **"Liên Hệ 100B"** (silver gradient button, `mailto:global@100b.co`)
 
 ---
 
@@ -54,7 +53,7 @@ CTA nav: **"Đăng Ký Tham Gia"** (silver gradient button)
 | `Users` | **5 buyers** | nhà phát triển BĐS & developer Mỹ |
 | `LineChart` | **$500M+** | combined active pipeline |
 | `Building` | **10–13** | nhà máy được tuyển chọn |
-| CTA card | **Đăng Ký Tham Gia** → | `btn-silver-gradient` |
+| CTA card | **Liên Hệ 100B** → | `btn-silver-gradient`, `mailto:global@100b.co` |
 
 ---
 
@@ -324,77 +323,7 @@ CTA nav: **"Đăng Ký Tham Gia"** (silver gradient button)
 
 ---
 
-## 9. TRACK RECORD — Section "track-record"
-
-**Eyebrow:** `Đợt trước`
-
-**H2:**
-> 10/2025 — Lần đầu kết nối.
-
-**Body:**
-> 6 ngày (7–12/10/2025), bà Lezlie Tram Le đến Việt Nam trực tiếp tham quan các nhà máy đối tác tiềm năng của 100B. Đó là **proof-of-concept** đầu tiên cho mô hình factory-to-developer trực tiếp.
->
-> VN Direct 2026 là **đợt thứ 2** — quy mô lớn hơn, đoàn 4 buyers đa lĩnh vực, lịch trình 7 ngày + 2 ngày excursion, và tệp nhà máy mở rộng từ 6 đợt trước lên **10–13 đơn vị** lần này.
-
-**Mini-stats:**
-- **2025**: 1 khách (Lezlie) • 6 ngày • proof-of-concept
-- **2026**: 5 buyers • 7+2 ngày • 10–13 nhà máy • $500M+ pipeline
-
----
-
-## 10. LỊCH TRÌNH — Section "lich-trinh"
-
-**Eyebrow:** `Thời gian & địa điểm`
-
-**H2:**
-> 30/05 – 06/06/2026
-
-**Schedule overview table:**
-
-| Ngày | Hoạt động |
-| --- | --- |
-| **D1 — 30/05** | Đoàn đến TP.HCM. Welcome dinner. |
-| **D2–D5** | Factory visits — TP.HCM, Bình Dương, Đồng Nai (cluster phía Nam) |
-| **D6** | Factory visits — Bình Định / Quy Nhơn (gỗ + nội thất) |
-| **D7 — 05/06** | Wrap-up briefing, networking gala |
-| **D8–D9 (06/06–07/06)** | Excursion: Hạ Long / Hội An (optional, tham quan văn hóa) |
-
-> Lịch trình chính thức sẽ được khoá sau khi 100B hoàn tất vòng tuyển chọn nhà máy (deadline: **31/01/2026**). Mỗi nhà máy được chọn sẽ nhận lịch riêng tối thiểu **90 ngày trước trip**.
-
----
-
-## 11. CTA / ĐĂNG KÝ — Section "dang-ky"
-
-**Eyebrow:** `Tham gia`
-
-**H2:**
-> Đăng ký giới thiệu nhà máy của Quý vị.
-
-**Lead:**
-> Vòng tuyển chọn cuối: **31 tháng 01, 2026**.
-> Sau khi nhận đăng ký, đội 100B sẽ liên hệ trong vòng **7 ngày làm việc** để bắt đầu vòng đánh giá (factory profile, sample review, video call).
-
-**Form fields (giữ ngắn gọn):**
-- Tên công ty / nhà máy
-- Sản phẩm chính
-- Năm thành lập
-- Quy mô (m² nhà xưởng / công nhân)
-- Chứng chỉ hiện có
-- Đã xuất khẩu sang quốc gia nào
-- Người liên hệ (Tên, chức vụ, email, phone, Zalo)
-- Website (nếu có)
-- Ghi chú thêm (mong muốn / câu hỏi)
-
-**Submit CTA:** `Gửi Đăng Ký` (silver gradient button, full-width on mobile)
-
-**Alternative contact (dưới form):**
-> Hoặc liên hệ trực tiếp:
-> 📧 **global@100b.co**
-> 🌐 **100b.co/goglobal**
-
----
-
-## 12. FOOTER
+## 9. FOOTER
 
 **Left column:**
 - Logo 100B Beyond Borders
@@ -406,11 +335,11 @@ CTA nav: **"Đăng Ký Tham Gia"** (silver gradient button)
 - Cơ hội
 - Đoàn buyers
 - Chương trình
-- Đăng ký
+- Về 100B
 
 **Right column — Liên hệ:**
-- global@100b.co
-- 100b.co/goglobal
+- 📧 global@100b.co
+- 🌐 100b.co/goglobal
 - VN Direct 2026 (link sang site chính)
 
 **Bottom line:**
@@ -441,7 +370,4 @@ CTA nav: **"Đăng Ký Tham Gia"** (silver gradient button)
 6. Lợi ích (6 benefit cards)
 7. Tiêu chí (5-item checklist)
 8. Về 100B (5 service cards)
-9. Track record (so sánh 2025 vs 2026)
-10. Lịch trình (table 7+2 ngày)
-11. Đăng ký (form + alt contact)
-12. Footer
+9. Footer
