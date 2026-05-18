@@ -28,6 +28,8 @@ CTA nav: **"Liên Hệ 100B"** (silver gradient button, `mailto:global@100b.co`)
 
 ## 1. HERO
 
+**Background video:** **Tái sử dụng nguyên video Wistia của site mẹ VN Direct 2026** — không quay mới. Copy nguyên iframe + container CSS từ `src/App.tsx` của site mẹ (đã được fix uncropped trên desktop). Chi tiết kỹ thuật xem mục **2.7** của `BRAND_GUIDELINES_FACTORY.md`.
+
 **Eyebrow pills (2):**
 - `Build Better Series — Thư mời nhà máy`
 - `30/05 – 06/06/2026`
