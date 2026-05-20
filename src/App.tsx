@@ -364,7 +364,7 @@ const TripSection = () => (
               ["Dates", "May 30 – June 6, 2026"],
               ["Fly Into", "Ho Chi Minh City (SGN)"],
               ["Fly Out", "Hanoi (HAN)"],
-              ["Stops", "12 curated factories"],
+              ["Stops", "13 curated factories"],
               ["Format", "Private · Hand-picked"],
               ["Hosts", "100B × LT Commercial Group"],
             ].map(([l, v], i) => (
@@ -407,11 +407,11 @@ const TripSection = () => (
               {[
                 { day: "Day 1", date: "May 30", loc: "HCMC — Arrive", chips: [["Arrival + Orientation dinner", true]] },
                 { day: "Day 2", date: "May 31", loc: "Binh Duong", chips: [["An Cuong Wood", true], ["BM Windows", true]] },
-                { day: "Day 3", date: "Jun 1", loc: "Binh Duong + Long An", chips: [["Phu Tai / Vina G7", true], ["Dai Dung", true], ["Tan Thanh", false]] },
+                { day: "Day 3", date: "Jun 1", loc: "Binh Duong + Long An", chips: [["Phu Tai / Vina G7", true], ["Dai Dung", true], ["The One & Jager", true]] },
                 { day: "Day 4", date: "Jun 2", loc: "HCMC — Flex", chips: [["AA Corporation", false], ["Evening flight north", true]] },
-                { day: "Day 5", date: "Jun 3", loc: "Fly → Hanoi", chips: [["AM arrival", false], ["Hoa Phat briefing", true]] },
-                { day: "Day 6", date: "Jun 4", loc: "Bac Ninh + Vinh Phuc + Hanoi", chips: [["Tonmat", true], ["Amy Grupo", true], ["Eurowindow", true]] },
-                { day: "Day 7", date: "Jun 5", loc: "Hai Phong", chips: [["An Phat Holdings", true], ["Tien Phong", false]] },
+                { day: "Day 5", date: "Jun 3", loc: "Fly → Hanoi", chips: [["AM arrival", true]] },
+                { day: "Day 6", date: "Jun 4", loc: "Bac Ninh + Vinh Phuc + Hanoi", chips: [["Tonmat", true], ["Amy Grupo", true], ["Woodsland", true], ["Eurowindow", false]] },
+                { day: "Day 7", date: "Jun 5", loc: "Hai Phong", chips: [["An Phat Holdings", true]] },
                 { day: "Day 8", date: "Jun 6", loc: "Hanoi — Depart / Optional Ha Long Bay", chips: [["Departure", false], ["Optional: GAACC add-on Jun 6–7", true]] },
               ].map((r, i, arr) => (
                 <div 
@@ -466,7 +466,6 @@ const Factories = () => {
 
   const sampleVideos = [
     { name: "Eurowindow", id: "7452658431347343360", urn: "ugcPost" },
-    { name: "Tien Phong Plastic", id: "7452663591951986688", urn: "ugcPost" },
     { name: "Woodsland", id: "7350501850061713409" },
     { name: "Vina G7", id: "7348646710086201345" },
     { name: "Phu Tai", id: "7347942924719935488" },
@@ -522,15 +521,7 @@ const Factories = () => {
       "LEED Gold v4 factory — among Vietnam's highest green manufacturing credentials.",
       "Portfolio: stadiums, airports, skyscrapers, offshore modules. Impressive for GC and developer audiences.",
     ] },
-    { id: "05", name: "Tan Thanh Container", loc: "HCMC", type: "ISO Containers · Modified / Prefab Units", rating: 3, hub: "SOUTH", stats: [
-      ["EST. REVENUE", "~$40–60M"],
-      ["POSITION", "Vietnam's #1 container brand"],
-    ], details: [
-      "Vietnam's leading container manufacturer — ISO, modified, cold storage, and prefab units.",
-      "Growing US interest in modular/container construction. This visit validates real-world economics.",
-      "US export economics contingent on logistics cost and tariff environment — visit is exploratory.",
-    ] },
-    { id: "06", name: "AA Corporation", loc: "HCMC / Long An", type: "Luxury FF&E · Custom Furniture · Interior Fit-Out", rating: 4, hub: "SOUTH", stats: [
+    { id: "05", name: "AA Corporation", loc: "HCMC / Long An", type: "Luxury FF&E · Custom Furniture · Interior Fit-Out", rating: 4, hub: "SOUTH", stats: [
       ["EST. REVENUE", "~$100–120M"],
       ["FOUNDED", "1989"],
       ["EXPORT", "40+ countries"],
@@ -540,8 +531,21 @@ const Factories = () => {
       "Exports to 40+ countries. Live US subsidiary in Portland, OR. Park Hyatt, Marriott, Ritz-Carlton portfolio.",
       "Best for hospitality developers and luxury residential — premium custom FF&E, not volume production.",
     ] },
+    { id: "06", name: "The One & Jager", loc: "Binh Duong (+ Hung Yen footprint)", type: "Office Furniture · Hospitality FF&E · Residential · Decor", rating: 4, hub: "SOUTH", stats: [
+      ["FOUNDED", "1995 (30+ years)"],
+      ["FACTORIES", "7 sites · 320,000 m²"],
+      ["SKUs", "3,000+ product codes"],
+      ["AWARDS", "National Brand 2024 · VNR500 (2024–25)"],
+      ["EXPORTS", "Japan · Singapore · Middle East · scaling US/EU"],
+    ], details: [
+      "Vietnam's #1 office furniture brand by market share — 30 years experience, originally Sơn Thủy (1995).",
+      "7 modern factories on 32 hectares across Hưng Yên (North) + Bình Dương (South). G7-imported automation, CNC, robotic lines, electrostatic paint.",
+      "Catalog spans 3,000+ SKUs: executive office (Luxury V9, Supreme), hospitality FF&E, schools, healthcare, residential, decor — true full-stack interior supplier.",
+      "ISO 9001:2015 · 14001:2015 · 45001:2018. Currently exports to Japan, Singapore, Laos, Cambodia, Ukraine, Middle East — actively targeting US/EU.",
+      "Joint visit with Jager (sister brand) — combined OEM/ODM capacity ideal for hospitality & multi-family fit-out programs.",
+    ] },
 
-    { id: "07", name: "Eurowindow", loc: "Hanoi", type: "Aluminum + uPVC Windows/Doors · Curtain Walls · Timber Doors", rating: 4, hub: "NORTH — HANOI HUB · JUN 3 – JUN 6", stats: [
+    { id: "07", name: "Eurowindow", loc: "Hanoi", type: "Aluminum + uPVC Windows/Doors · Curtain Walls · Timber Doors", rating: 4, hub: "NORTH — HANOI HUB · JUN 3 – JUN 6", optional: true, stats: [
       ["EST. REVENUE", "~$200M"],
       ["FACTORY", "~500,000 m²"],
       ["EXPORT", "30+ countries"],
@@ -549,8 +553,29 @@ const Factories = () => {
       "Vietnam's #1 fenestration brand — supplies airports, luxury hotels, and major towers nationally.",
       "Widest product range: aluminum + uPVC windows/doors, curtain walls, timber doors, insulating glass, auto doors — entire building envelope from one factory.",
       "500K m² facility, 30+ export countries. Single-source for every door and window on a project.",
+      "Optional stop on the Hanoi leg — added based on buyer interest in fenestration sourcing.",
     ] },
-    { id: "08", name: "Tonmat Group", loc: "Bac Ninh (~30 min)", type: "Insulated Roof + Wall Panels · Metal Roofing · Color-Coated Steel", rating: 5, hub: "NORTH", stats: [
+    { id: "08", name: "An Phat Holdings", loc: "Hai Phong · AnPro + An Cuong Flooring", type: "SPC/LVT Flooring · PVC Wall Panels · Wall Cladding", rating: 4, hub: "NORTH", stats: [
+      ["PARENT REVENUE", "$500M+ (AAH)"],
+      ["LISTING", "Public"],
+      ["KEY FEATURE", "100% Waterproof · Formaldehyde-Free"],
+    ], details: [
+      "Two brands, one factory: AnPro + An Cuong Flooring — SPC/LVT flooring, PVC wall panels, wall cladding.",
+      "100% waterproof, formaldehyde-free — easy spec for US residential, multifamily, hospitality.",
+      "Note: completely separate from An Cuong Wood (#01). Different parent, different product line entirely.",
+    ] },
+    { id: "09", name: "Woodsland", loc: "Hanoi / Tuyen Quang / Bac Giang", type: "Wood Furniture · IKEA-Spec Production · FSC Chain", rating: 4, hub: "NORTH", stats: [
+      ["FOUNDED", "2002"],
+      ["IKEA PARTNERSHIP", "Industrial JV since 2017"],
+      ["CERTIFICATIONS", "FSC · IKEA IWAY · ISO"],
+      ["FACTORIES", "Multi-site · Hanoi / Tuyen Quang / Bac Giang"],
+    ], details: [
+      "One of Vietnam's largest wood furniture manufacturers — Industrial JV with IKEA since 2017.",
+      "FSC-certified responsible forestry chain. IWAY supplier compliance proven at IKEA's global scrutiny level.",
+      "Long-track export experience to IKEA, US home retailers, and European retailers — proven QC for global brand specs.",
+      "Best for buyers needing reliable wood furniture at scale with documented sustainability credentials.",
+    ] },
+    { id: "10", name: "Tonmat Group", loc: "Bac Ninh (~30 min)", type: "Insulated Roof + Wall Panels · Metal Roofing · Color-Coated Steel", rating: 5, hub: "NORTH", stats: [
       ["EST. REVENUE", "~$150M"],
       ["VIETNAM", "#1 Sandwich Panel"],
       ["GLOBAL", "Top 20 Worldwide"],
@@ -560,7 +585,7 @@ const Factories = () => {
       "Group: TONMATPAN (sandwich panels) + FUJITON (color-coated steel, JV with Marubeni Itochu Japan).",
       "Metal roofing with Japanese-quality backing — easy to spec for US project owners.",
     ] },
-    { id: "09", name: "Amy Grupo", loc: "Vinh Phuc (~45 min)", type: "Tile · SPC/LVT Flooring · WPC Decking · Wall Panels", rating: 5, hub: "NORTH", stats: [
+    { id: "11", name: "Amy Grupo", loc: "Vinh Phuc (~45 min)", type: "Tile · SPC/LVT Flooring · WPC Decking · Wall Panels", rating: 5, hub: "NORTH", stats: [
       ["EST. REVENUE", "~$80–120M"],
       ["FOUNDED", "2015"],
       ["EXPORT", "USA · Mexico + others"],
@@ -568,33 +593,7 @@ const Factories = () => {
       "Most diverse stop: ceramic tiles, SPC/LVT flooring, WPC decking, wall panels — all under one roof.",
       "US and Mexico exports confirmed. Runs its own design awards program — not just a commodity factory.",
     ] },
-    { id: "10", name: "An Phat Holdings", loc: "Hai Phong · AnPro + An Cuong Flooring", type: "SPC/LVT Flooring · PVC Wall Panels · Wall Cladding", rating: 4, hub: "NORTH", stats: [
-      ["PARENT REVENUE", "$500M+ (AAH)"],
-      ["LISTING", "Public"],
-      ["KEY FEATURE", "100% Waterproof · Formaldehyde-Free"],
-    ], details: [
-      "Two brands, one factory: AnPro + An Cuong Flooring — SPC/LVT flooring, PVC wall panels, wall cladding.",
-      "100% waterproof, formaldehyde-free — easy spec for US residential, multifamily, hospitality.",
-      "Note: completely separate from An Cuong Wood (#01). Different parent, different product line entirely.",
-    ] },
-    { id: "11", name: "Tien Phong Plastic", loc: "Hai Phong (w/ #10)", type: "PVC + HDPE Pipes · Pipe Fittings · Plumbing Systems", rating: 2, hub: "NORTH", stats: [
-      ["REVENUE (TTM)", "~$260M"],
-      ["LISTED", "NTP (public)"],
-      ["HISTORY", "50+ years"],
-    ], details: [
-      "Vietnam's #1 PVC/HDPE pipe manufacturer. 1,000+ product types. Combine with Hai Phong visit (#10).",
-      "Best for land developers speccing underground utilities — plumbing, drainage, irrigation supply chain.",
-    ] },
-    { id: "12", name: "Hoa Phat Group", loc: "Hanoi · Meeting Format", type: "Construction Steel · Galvanized + Color-Coated Steel · Metal Roofing", rating: 4, hub: "NORTH", stats: [
-      ["REVENUE 2024", "~$5.6B"],
-      ["VIETNAM", "#1 Steel Producer"],
-      ["EXPORT", "40+ countries incl. USA"],
-    ], details: [
-      "Vietnam's #1 steel producer, Southeast Asia's largest — Top 30 globally. Exports to USA, Canada, Japan.",
-      "Format: commercial briefing (not factory tour) — for volume steel and metal roofing sourcing conversations.",
-    ] },
-
-    { id: "13", name: "EuroStark (EuP Group)", loc: "Yen Bai", type: "WPC Decking · Cladding · Fencing · Outdoor Furniture", rating: 4, hub: "NORTH", stats: [
+    { id: "12", name: "EuroStark (EuP Group)", loc: "Yen Bai", type: "WPC Decking · Cladding · Fencing · Outdoor Furniture", rating: 4, hub: "NORTH", stats: [
       ["EST. REVENUE", "$320M (EuP Group parent)"],
       ["FACTORY", "150,000 m²"],
       ["CAPACITY", "90 containers/month"],
@@ -606,6 +605,17 @@ const Factories = () => {
       "ISO 9001, ISO 14001, FSC, BSCI Level B, Intertek, TÜV/SGS certified — documentation is export-ready for US buyers.",
       "Already shipping to European DIY retailers at scale — the US is their next target market.",
       "Location note: Yen Bai Province is ~3.5 hours from Hanoi. Best scheduled as a dedicated day trip or overnight, not combined with other Hanoi-area stops.",
+    ] },
+    { id: "13", name: "Europlas (EuP Group)", loc: "Yen Bai", type: "WPC Decking Profiles · Plastics Compounding", rating: 4, hub: "NORTH", stats: [
+      ["PARENT", "EuP Group ($320M revenue)"],
+      ["GROUP RANK", "World #1 Filler Masterbatch"],
+      ["PRODUCT LINE", "WPC decking specialist"],
+      ["CO-LOCATION", "Sister facility to EuroStark (#12)"],
+    ], details: [
+      "EuP Group's dedicated plastics + decking manufacturing arm — sister facility to EuroStark.",
+      "EuP Group is the world's #1 filler masterbatch producer — entire raw material chain owned in-house, unique cost & QC advantage.",
+      "WPC decking focus complements EuroStark's outdoor living catalog. Visit pairs naturally with EuroStark in one Yen Bai day.",
+      "Best for buyers sourcing decking SKUs at volume — export-ready documentation, full certification stack.",
     ] },
   ];
 
@@ -729,7 +739,12 @@ const Factories = () => {
                     <div className="text-sm lg:text-base uppercase font-display font-bold tracking-widest text-[#a3a3a3] group-hover:text-brand-gold transition-colors">{f.id}</div>
                     
                     <div>
-                      <h4 className="text-xl lg:text-2xl font-bold text-text-heading mb-2 group-hover:text-brand-gold transition-colors">{f.name}</h4>
+                      <div className="flex items-center gap-2 mb-2 flex-wrap">
+                        <h4 className="text-xl lg:text-2xl font-bold text-text-heading group-hover:text-brand-gold transition-colors">{f.name}</h4>
+                        {'optional' in f && f.optional && (
+                          <span className="text-[10px] uppercase tracking-[0.15em] px-2 py-0.5 border border-brand-gold/50 text-brand-gold rounded-full font-medium">Optional</span>
+                        )}
+                      </div>
                       <div className="text-sm lg:text-base text-text-body flex items-center gap-2">
                         {f.loc} {f.rating >= 4 && <span className="text-brand-gold">★</span>}
                       </div>
