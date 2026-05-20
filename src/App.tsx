@@ -407,11 +407,11 @@ const TripSection = () => (
               {[
                 { day: "Day 1", date: "May 30", loc: "HCMC — Arrive", chips: [["Arrival + Orientation dinner", true]] },
                 { day: "Day 2", date: "May 31", loc: "Binh Duong", chips: [["An Cuong Wood", true], ["BM Windows", true]] },
-                { day: "Day 3", date: "Jun 1", loc: "Binh Duong + Long An", chips: [["Phu Tai / Vina G7", true], ["Dai Dung", true], ["The One", true]] },
+                { day: "Day 3", date: "Jun 1", loc: "Binh Duong + Long An", chips: [["Phu Tai / Vina G7", true], ["Dai Dung", true]] },
                 { day: "Day 4", date: "Jun 2", loc: "HCMC — Flex", chips: [["AA Corporation", false], ["Evening flight north", true]] },
-                { day: "Day 5", date: "Jun 3", loc: "Fly → Hanoi", chips: [["AM arrival", true], ["Eurowindow PM", false]] },
-                { day: "Day 6", date: "Jun 4", loc: "Bac Ninh + Vinh Phuc + Hanoi", chips: [["Tonmat", true], ["Amy Grupo", true], ["Jager", true], ["Woodsland", true]] },
-                { day: "Day 7", date: "Jun 5", loc: "Hai Phong", chips: [["An Phat Holdings", true]] },
+                { day: "Day 5", date: "Jun 3", loc: "Fly → Hanoi · Hung Yen", chips: [["AM arrival", true], ["The One (Hung Yen) PM", true]] },
+                { day: "Day 6", date: "Jun 4", loc: "Bac Ninh + Vinh Phuc + Phu Tho", chips: [["Tonmat", true], ["Amy Grupo", true], ["Jager (Phu Tho)", true]] },
+                { day: "Day 7", date: "Jun 5", loc: "Hanoi + Hai Phong", chips: [["Woodsland", true], ["An Phat Holdings", true], ["Eurowindow", false]] },
                 { day: "Day 8", date: "Jun 6", loc: "Hanoi — Depart / Optional Ha Long Bay", chips: [["Departure", false], ["Optional: GAACC add-on Jun 6–7", true]] },
               ].map((r, i, arr) => (
                 <div 
@@ -531,21 +531,8 @@ const Factories = () => {
       "Exports to 40+ countries. Live US subsidiary in Portland, OR. Park Hyatt, Marriott, Ritz-Carlton portfolio.",
       "Best for hospitality developers and luxury residential — premium custom FF&E, not volume production.",
     ] },
-    { id: "06", name: "The One", loc: "Binh Duong (+ Hung Yen footprint)", type: "Office Furniture · Hospitality FF&E · Residential · Decor", rating: 4, hub: "SOUTH", stats: [
-      ["FOUNDED", "1995 (30+ years)"],
-      ["FACTORIES", "7 sites · 320,000 m²"],
-      ["SKUs", "3,000+ product codes"],
-      ["AWARDS", "National Brand 2024 · VNR500 (2024–25)"],
-      ["EXPORTS", "Japan · Singapore · Middle East · scaling US/EU"],
-    ], details: [
-      "Vietnam's #1 office furniture brand by market share — 30 years experience, originally Sơn Thủy (1995).",
-      "7 modern factories on 32 hectares across Hưng Yên (North) + Bình Dương (South) — G7-imported automation, CNC, robotic lines, electrostatic paint at G7-quality precision.",
-      "3,000+ SKUs spanning executive office (Luxury V9, Supreme), hospitality FF&E, schools, healthcare, residential, decor — true full-stack interior supplier.",
-      "ISO 9001:2015 · 14001:2015 · 45001:2018. Currently exports to Japan, Singapore, Laos, Cambodia, Ukraine, Middle East — actively targeting US/EU as next growth markets.",
-      "Distribution covers all 63 provinces of Vietnam — proven domestic logistics that translates well to US dealer/distributor models.",
-    ] },
 
-    { id: "07", name: "Eurowindow", loc: "Hanoi", type: "Aluminum + uPVC Windows/Doors · Curtain Walls · Timber Doors", rating: 4, hub: "NORTH — HANOI HUB · JUN 3 – JUN 6", optional: true, stats: [
+    { id: "06", name: "Eurowindow", loc: "Hanoi", type: "Aluminum + uPVC Windows/Doors · Curtain Walls · Timber Doors", rating: 4, hub: "NORTH — HANOI HUB · JUN 3 – JUN 6", optional: true, stats: [
       ["EST. REVENUE", "~$200M"],
       ["FACTORY", "~500,000 m²"],
       ["EXPORT", "30+ countries"],
@@ -555,7 +542,7 @@ const Factories = () => {
       "500K m² facility, 30+ export countries. Single-source for every door and window on a project.",
       "Optional stop on the Hanoi leg — added based on buyer interest in fenestration sourcing.",
     ] },
-    { id: "08", name: "An Phat Holdings", loc: "Hai Phong · AnPro + An Cuong Flooring", type: "SPC/LVT Flooring · PVC Wall Panels · Wall Cladding", rating: 4, hub: "NORTH", stats: [
+    { id: "07", name: "An Phat Holdings", loc: "Hai Phong · AnPro + An Cuong Flooring", type: "SPC/LVT Flooring · PVC Wall Panels · Wall Cladding", rating: 4, hub: "NORTH", stats: [
       ["PARENT REVENUE", "$500M+ (AAH)"],
       ["LISTING", "Public"],
       ["KEY FEATURE", "100% Waterproof · Formaldehyde-Free"],
@@ -564,7 +551,7 @@ const Factories = () => {
       "100% waterproof, formaldehyde-free — easy spec for US residential, multifamily, hospitality.",
       "Note: completely separate from An Cuong Wood (#01). Different parent, different product line entirely.",
     ] },
-    { id: "09", name: "Woodsland", loc: "Hanoi / Tuyen Quang / Ha Giang", type: "Wood Furniture · Kitchen Cabinets · Plywood · Flooring", rating: 5, hub: "NORTH", stats: [
+    { id: "08", name: "Woodsland", loc: "Hanoi", type: "Wood Furniture · Kitchen Cabinets · Plywood · Flooring", rating: 5, hub: "NORTH", stats: [
       ["EST. REVENUE", "~$100M (2022)"],
       ["FACTORIES", "5–6 sites · ~300,000 m²"],
       ["STAFF", "3,500–4,000"],
@@ -572,10 +559,23 @@ const Factories = () => {
       ["CERTIFICATIONS", "FSC · BSCI · CTPAT · National Brand 2024"],
     ], details: [
       "Strategic supplier to IKEA, Home Depot, Walmart, Costco — one of IKEA's top 15 suppliers in Southeast Asia.",
-      "5–6 factory complex across Hanoi, Tuyen Quang, Ha Giang totaling ~300,000 m² with 3,500–4,000 staff. Tuyen Quang plant alone contributes ~$50M (1.2T VND) revenue.",
+      "HQ + flagship operations in Hanoi, with additional plants extending into Tuyen Quang and Ha Giang — ~300,000 m² total, 3,500–4,000 staff group-wide.",
       "Exports furniture, kitchen cabinets, flooring, and plywood to USA, Canada, Japan, and EU — direct supplier to the biggest US home retailers, not a tier-2 intermediary.",
       "FSC + BSCI + CTPAT certified — full supply-chain documentation for US import compliance. Vietnam National Brand 2024 for flooring + furniture lines.",
       "Domestic sub-brands: Woodsland Doors (premium industrial doors) + Eureka (residential furniture).",
+    ] },
+    { id: "09", name: "The One", loc: "Hung Yen (KCN Pho Noi A) · +Binh Duong site", type: "Office Furniture · Hospitality FF&E · Residential · Decor", rating: 4, hub: "NORTH", stats: [
+      ["FOUNDED", "1995 (30+ years)"],
+      ["FACTORIES", "7 sites · 320,000 m²"],
+      ["SKUs", "3,000+ product codes"],
+      ["AWARDS", "National Brand 2024 · VNR500 (2024–25)"],
+      ["EXPORTS", "Japan · Singapore · Middle East · scaling US/EU"],
+    ], details: [
+      "Vietnam's #1 office furniture brand by market share — 30 years experience, originally Sơn Thủy (1995).",
+      "Hanoi-region visit happens at the Hưng Yên flagship in KCN Phố Nối A (~1 hr east of Hà Nội). Group operates 7 modern factories on 32 hectares across Hưng Yên (North) + Bình Dương (South).",
+      "G7-imported automation, CNC, robotic lines, electrostatic paint. ISO 9001:2015 · 14001:2015 · 45001:2018.",
+      "3,000+ SKUs spanning executive office (Luxury V9, Supreme), hospitality FF&E, schools, healthcare, residential, decor — true full-stack interior supplier.",
+      "Currently exports to Japan, Singapore, Laos, Cambodia, Ukraine, Middle East — actively targeting US/EU. Distribution covers all 63 provinces.",
     ] },
     { id: "10", name: "Tonmat Group", loc: "Bac Ninh (~30 min)", type: "Insulated Roof + Wall Panels · Metal Roofing · Color-Coated Steel", rating: 5, hub: "NORTH", stats: [
       ["EST. REVENUE", "~$150M"],
@@ -595,7 +595,7 @@ const Factories = () => {
       "Most diverse stop: ceramic tiles, SPC/LVT flooring, WPC decking, wall panels — all under one roof.",
       "US and Mexico exports confirmed. Runs its own design awards program — not just a commodity factory.",
     ] },
-    { id: "12", name: "Jager (HPL Binh Xuyen)", loc: "Vinh Phuc (~45 min, near Amy Grupo)", type: "Smart-Factory 4.0 · Industrial Wood Furniture · HPL Cabinetry", rating: 5, hub: "NORTH", stats: [
+    { id: "12", name: "Jager (HPL Binh Xuyen)", loc: "Phu Tho (~1.5 hr NW of Hanoi)", type: "Smart-Factory 4.0 · Industrial Wood Furniture · HPL Cabinetry", rating: 5, hub: "NORTH", stats: [
       ["FACTORY", "12,000 m² site · 13,000 m² built (2F)"],
       ["CAPACITY", "400,000 products/yr"],
       ["TECH INVESTMENT", "~$8M (200B VND)"],
